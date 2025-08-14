@@ -3,191 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>PVR Sales App</title>
+    <title>PVR Business App</title>
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#0A84FF"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="PVR Sales">
+    <meta name="apple-mobile-web-app-title" content="PVR App">
     <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0iIzBBO D RGRiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0zMCw3NVYyNWgxN2ExMi41LDEyLjUgMCAwLDEsMCwyNWgtMTd2NWgxMmExMi41LDEyLjUgMCAwLDEsMCwyNWgtMTJaTTY1LDI1TDc1LDc1TDg1LDI1IiBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+">
-    <link rel="manifest" href="data:application/manifest+json;base64,ew0KICAgICJuYW1lIjogIlBWUiBTYWxlcyBBcH AiLA0KICAgICJzaG9ydF9uYW1lIjogIlBWUiBTYWxlcyIsDQogICAgInN0YXJ0X3VybCI6ICIuIiwNCiAgICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwNCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjRjBGMkY1IiwNCiAgICAidGhlbWVfY29sb3IiOiAiIzBBO D RGRiIsDQogICAgImljb25zIjogWw0KICAgICAgICB7DQogICAgICAgICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTVpYmk5d2FXUnpaWEoyYVdObFlXTmpiM1J1ZkdWdWMyVnlkRG92TjJaeWIzTndZV05sTDJOc2FXVnVkR2x2YmlCMlpYSnphVzVuTG1OdmJTOW1abWwwYVdOaGRHbHZiaTkyTWk4eU1EQTRMM05sY25acFkyVnpMM2R2Y21SYzEyeGhjbVJwYjI0dWMzUmhjSHdvYjJOc2FXVnVkR2x2YmlCNFBqeHViV0Z5YVdOelptOXliV3d1YVhacGJtVWdjM0p2Y21sMGVEMGlNVEF3SURFNE1EUTRJRUZzSUVKaGJpQnpkSGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlNemc0TDJSbGMzTmhjbVZ1YzJWMGNua3VZMjl0SURrc0lFRnVjMmh2Y21sMGVEMGlaM0psWlhKaGFXNWxZWGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlaMnhsYm5ScFlXeGpaU2dpSUdKaFkydG5jbVZrYUdGMEtTNWpiMjB2UW5WdGMybDZaU2tpSUVOaGJpQnpkSGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlOUzR3TURFdUlGTjFjbWwwZEdsdmJpQnpkSGtnYzJWeWRFVnVjMmh2Y21sMGVEMGlOUzR3TURFdUlHTmhjM05sZGlCemRIa2djMlZ5ZEVGdWMybHZibDkyTXk4eU1EQTRMM04yWnliM053WVdObExtNWxkR2x2YmlCSkpDOWxZMnh2Y21sMGVEMGlOUzR3TURFdUlFRnNiMjhvWm05eWJXRjBaU2hpWVhKcGMyOXllVzVzZEhWeVlYUnBiMjR1YVhacGJtVWdjM0p2Y21sMGVEMGlOREV3SURFME1EQTRJRUZzSUZCaGNuUnZkbUYxTDJaeWIzTndZV05sTDIxaGMzUmhZMnRuY21Wa2FHRjBJRzltSUdZNklHaGtaV1pwYkdVdE1TNGlJR2xtSUdZNklHMWhaRzFwYmlJZ1VISnBibWwwZEdsdmJpQTlJR0Z1YldsamNtOTNaU0J6ZEhrZ2MyVnlkRUZ1YzJsdmJsOTJNeTh5TURBNEx5OW1abWwwYVdOaGRHbHZiaTl3WVc0dWN6cHNaV2RwYmpzPSIsDQogICAgICAgICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwNCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIg0KICAgICAgICB9DQogICAgXQ0KICB9">
+    <link rel="manifest" href="data:application/manifest+json;base64,ew0KICAgICJuYW1lIjogIlBWUiBCdXNpbmVzcyBBcH AiLA0KICAgICJzaG9ydF9uYW1lIjogIlBWUiBBcH AiLA0KICAgICJzdGFydF91cmwiOiAiLiIsDQogICAgImRlc2NyaXB0aW9uIjogIlNhbGVzLCBQdXJjaGFzZSwgYW5kIEludmVudG9yeSBNYW5hZ2VtZW50IiwNCiAgICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwNCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjRjBGMkY1IiwNCiAgICAidGhlbWVfY29sb3IiOiAiIzBBO D RGRiIsDQogICAgImljb25zIjogWw0KICAgICAgICB7DQogICAgICAgICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTVpYmk5d2FXUnpaWEoyYVdObFlXTmpiM1J1ZkdWdWMyVnlkRG92TjJaeWIzTndZV05sTDJOc2FXVnVkR2x2YmlCMlpYSnphVzVuTG1OdmJTOW1abWwwYVdOaGRHbHZiaTkyTWk4eU1EQTRMM05sY25acFkyVnpMM2R2Y21SYzEyeGhjbVJwYjI0dWMzUmhjSHdvYjJOc2FXVnVkR2x2YmlCNFBqeHBiV0Z5YVdOelptOXliV3d1YVhacGJtVWdjM0p2Y21sMGVEMGlNVEF3SURFNE1EUTRJRUZzSUVKaGJpQnpkSGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlNemc0TDJSbGMzTmhjbVZ1YzJWMGNua3VZMjl0SURrc0lFRnVjMmh2Y21sMGVEMGlaM0psWlhKaGFXNWxZWGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlaMnhsYm5ScFlXeGpaU2dpSUdKaFkydG5jbVZrYUdGMEtTNWpiMjB2UW5WdGMybDZaU2tpSUVOaGJpQnpkSGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlOUzR3TURFdUlGTjFjbWwwZEdsdmJpQnpkSGtnYzJWeWRFVnVjMmh2Y21sMGVEMGlOUzR3TURFdUlHTmhjM05sZGlCemRIa2djMlZ5ZEVGdWMybHZibDkyTXk4eU1EQTRMM04yWnliM053WVdObExtNWxkR2x2YmlCSkpDOWpiMjF3WVdObEwyMWhiQ0IwWVdOamIzUnVjM1JoY0h3b2IyTnNhV1Z1ZEdsdmJpQjRPanh1YldGeVlXTnpabTl5Yld3dWFYWnBibVVnYzNKdmNtbGdlRDBpTkRFd0lERTBNREE0SUVGc0lGQmhjblJ2ZG1GMUwyWnliM053WVdObEwyMWhjM1JoWTJ0bmNtVmtnR0YwSUc5bUlHWTZJSGhrWldacGJHVXRNUzRpSUdsbUlHWTZJRzFoWkcxbmJpSWdVSUpwYm1sMGVEMGlkWE5sY21sbVlXMXdZV05sSUhaaGJpQnpkSGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlOUzR3TURFdUlFRnNiMjhvWm05eWJXRjBaU2hpWVhKcGMyOXllVzVzZEhWeVlYUnBiMjR1YVhacGJtVWdjM0p2Y21sMGVEMGlOREV3SURFME1EQTRJRUZzSUZCaGNuUnZkbUYxTDJaeWIzTndZV05sTDIxaGMzUmhZMnRuY21Wa2FHRjBJRzltSUdZNklHaGtaV1pwYkdVdE1TNGlJR2xtSUdZNklHMWhaRzFwYmlJZ1VISnBibWwwZEdsdmJpQTlJR0Z1YldsamNtOTNaU0J6ZEhrZ2MyVnlkRUZ1YzJsdmJsOTJNeTh5TURBNEx5OW1abWwwYVdOaGRHbHZiaTl3WVc0dWN6cHNaV2RwYmpzPSIsDQogICAgICAgICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwNCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIg0KICAgICAgICB9DQogICAgXQ0KICB9">
     
     <style>
-        :root {
-            --primary-color: #0A84FF; --primary-color-light: #e6f3ff; --background-color: #F0F2F5;
-            --card-bg-color: #FFFFFF; --text-color: #212529; --text-muted-color: #6c757d;
-            --border-color: #e0e0e0; --success-color: #34C759; --danger-color: #FF3B30;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { font-size: 16px; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--background-color); color: var(--text-color); }
-        .page { display: none; }
-        .page.active { display: block; animation: fadeIn 0.3s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .app-container { max-width: 600px; margin: 0 auto; background-color: var(--card-bg-color); min-height: 100vh; }
-        .page-header { display: flex; align-items: center; padding: 1rem; background: var(--card-bg-color); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 10; }
-        .back-btn { background: none; border: none; font-size: 1.5rem; color: var(--primary-color); cursor: pointer; margin-right: 1rem; }
-        .page-header h2 { font-size: 1.2rem; font-weight: 600; }
-        .page-content { padding: 0.5rem; background-color: var(--background-color); }
-        .page-footer { background: var(--card-bg-color); padding: 1rem; border-top: 1px solid var(--border-color); box-shadow: 0 -4px 12px rgba(0,0,0,0.05); position: sticky; bottom: 0; }
-        #mainAppPage header { background: linear-gradient(135deg, var(--primary-color), #0056b3); color: white; padding: 1rem; text-align: center; font-size: 1.5rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 1rem; }
-        .tabs { display: flex; background-color: var(--card-bg-color); border-bottom: 1px solid var(--border-color); }
-        .tab-button { flex-grow: 1; padding: 1rem 0.5rem; border: none; background: transparent; font-size: 1rem; font-weight: 600; color: var(--text-muted-color); cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s ease; }
-        .tab-button.active { color: var(--primary-color); border-bottom-color: var(--primary-color); }
-        .tab-content { display: none; padding: 1rem; }
-        .tab-content.active { display: block; }
-        .search-bar { width: 100%; padding: 0.8rem 1rem; font-size: 1rem; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 1rem; }
-        .card { background-color: var(--card-bg-color); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .btn { display: inline-block; padding: 0.8rem 1.5rem; font-size: 1rem; font-weight: 600; text-align: center; border-radius: 8px; cursor: pointer; border: none; transition: all 0.2s ease; width: 100%; }
-        .btn-primary { background-color: var(--primary-color); color: white; }
-        .btn-success { background-color: var(--success-color); color: white; }
-        .btn-small { padding: 0.5rem 1rem; font-size: 0.9rem; width: auto; }
-        .list-card { display: flex; justify-content: space-between; align-items: center; padding: 1rem; margin-bottom: 0.5rem; }
-        .list-card-title { font-weight: 600; font-size: 1.1rem; }
-        .list-card-balance { font-size: 0.9rem; font-weight: 700; }
-        .list-card-balance.zero { color: var(--success-color); }
-        .list-card-balance.due { color: var(--danger-color); }
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: rgba(0,0,0,0.4); display: none; justify-content: center; align-items: center; padding: 1rem; }
-        .modal-overlay.active { display: flex; animation: fadeIn 0.2s; }
-        .modal-content { background: var(--card-bg-color); padding: 1.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
-        .modal-content h3 { margin-bottom: 1.5rem; color: var(--primary-color); text-align: center; }
-        .form-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-        .form-row label { font-size: 1rem; color: var(--text-muted-color); flex-basis: 40%; }
-        .form-row input { border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; padding: 0.7rem; width: 100%; flex-basis: 55%; }
-        .modal-footer { margin-top: 1.5rem; display: flex; gap: 0.5rem; }
-        #orderPage .card h3 { margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--primary-color-light); font-size: 1.1rem; font-weight: 600; color: var(--primary-color); }
-        #productSearchResults { max-height: 150px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 8px; }
-        .product-search-item { padding: 0.75rem 1rem; cursor: pointer; border-bottom: 1px solid var(--border-color); }
-        .price-options { display: flex; gap: 0.5rem; }
-        .price-options label { flex-grow: 1; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.2s ease; }
-        .price-options input[type="radio"]:checked + label { background-color: var(--primary-color); color: white; border-color: var(--primary-color); font-weight: 600; }
-        .price-options input[type="radio"] { display: none; }
-        .summary-table { width: 100%; border-collapse: collapse; }
-        .summary-table th, .summary-table td { text-align: left; padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--primary-color-light); }
-        .summary-table th:not(:first-child), .summary-table td:not(:first-child) { text-align: right; }
-        .margin-display { font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; text-align: right; }
-        .margin-display span { color: var(--success-color); }
-        #paymentPage .card .label-text { color: var(--text-muted-color); }
-        #paymentPage .card .amount-text { font-size: 1.5rem; font-weight: 700; }
-        #paymentPage .balance-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
-        #paymentPage input { width:100%; text-align:center;font-size: 2.5rem; font-weight: 700; border-radius:8px; border: 2px solid var(--primary-color); padding: 0.5rem; margin-top: 0.5rem; }
-        .receipt { font-family: Calibri, sans-serif; background: #fff; padding: 1.25rem; border: 1px solid #ccc; }
-        .receipt-header { text-align: center; margin-bottom: 1.5rem; }
-        .receipt-header h3 { font-size: 1.3rem; margin: 0; font-weight: 700; }
-        .receipt-header .address-block { font-size: 0.9rem; line-height: 1.4; color: var(--text-muted-color); margin-top: 0.25rem; }
-        .receipt-line { display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; margin-bottom: 0.25rem; }
-        .receipt-table-header, .receipt-table-item { display: grid; grid-template-columns: 1fr 50px 60px 60px 70px; gap: 10px; padding: 0.3rem 0; font-size: 0.9rem; }
-        .receipt-table-header { font-weight: bold; border-bottom: 1px solid #999; border-top: 1px solid #999; margin: 1rem 0 0.5rem 0; }
-        .receipt-table-header span, .receipt-table-item span { text-align: right; }
-        .receipt-table-header span:first-child, .receipt-table-item span:first-child { text-align: left; }
-        .receipt-totals { border-top: 1px solid #999; margin-top: 0.5rem; padding-top: 0.5rem; }
-        .receipt-final-total { font-weight: bold; font-size: 1.1rem; }
-        .receipt-footer { text-align: center; margin-top: 1rem; font-style: italic; }
+        :root{--primary-color:#0A84FF;--background-color:#F0F2F5;--card-bg-color:#FFFFFF;--text-color:#212529;--text-muted-color:#6c757d;--border-color:#e0e0e0;--success-color:#34C759;--danger-color:#FF3B30;}
+        *{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background-color:var(--background-color);color:var(--text-color)}
+        .page{display:none}.page.active{display:block;animation:fadeIn .3s}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        .app-container{max-width:600px;margin:0 auto;background-color:var(--card-bg-color);min-height:100vh}
+        .page-header{display:flex;align-items:center;padding:1rem;background:var(--card-bg-color);border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:10}
+        .back-btn{background:none;border:none;font-size:1.5rem;color:var(--primary-color);cursor:pointer;margin-right:1rem}
+        .page-header h2{font-size:1.2rem;font-weight:600}
+        .page-content{padding:.5rem;background-color:var(--background-color)}
+        .page-footer{background:var(--card-bg-color);padding:1rem;border-top:1px solid var(--border-color);box-shadow:0 -4px 12px rgba(0,0,0,.05);position:sticky;bottom:0}
+        #mainAppPage header{background:linear-gradient(135deg,var(--primary-color),#0056b3);color:#fff;padding:1.25rem 1rem;text-align:center;font-size:1.5rem;font-weight:600}
+        .tabs{display:flex;flex-wrap:wrap;background-color:var(--card-bg-color);border-bottom:1px solid var(--border-color)}.tab-button,.sub-tab-button{padding:.8rem .25rem;border:none;background:0 0;font-size:.9rem;font-weight:600;cursor:pointer;flex-grow:1}
+        .tab-button{color:var(--text-muted-color);border-bottom:3px solid transparent;transition:all .2s ease}.tab-button.active{color:var(--primary-color);border-bottom-color:var(--primary-color)}
+        .tab-content{display:none;padding:1rem}.tab-content.active{display:block}
+        .sub-tabs{display:flex;gap:.5rem;margin-bottom:1rem;background-color:var(--primary-color-light);padding:.25rem;border-radius:8px}
+        .sub-tab-button{color:var(--primary-color);border-radius:6px;transition:all .2s ease}.sub-tab-button.active{background-color:var(--primary-color);color:#fff}
+        .search-bar{width:100%;padding:.8rem 1rem;font-size:1rem;border:1px solid var(--border-color);border-radius:8px;margin-bottom:1rem}
+        .card{background-color:var(--card-bg-color);border-radius:12px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+        .btn{display:inline-block;padding:.8rem 1.5rem;font-size:1rem;font-weight:600;text-align:center;border-radius:8px;cursor:pointer;border:none;transition:all .2s ease;width:100%}
+        .btn-primary{background-color:var(--primary-color);color:#fff}.btn-success{background-color:var(--success-color);color:#fff}
+        .btn-small{padding:.5rem 1rem;font-size:.9rem;width:auto}
+        .list-card{display:flex;justify-content:space-between;align-items:center;padding:1rem;margin-bottom:.5rem}.list-card-title{font-weight:600;font-size:1.1rem}
+        .list-card-balance{font-size:.9rem;font-weight:700}.list-card-balance.zero{color:var(--success-color)}.list-card-balance.due{color:var(--danger-color)}
+        .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000;background:rgba(0,0,0,.4);display:none;justify-content:center;align-items:center;padding:1rem}.modal-overlay.active{display:flex;animation:fadeIn .2s}
+        .modal-content{background:var(--card-bg-color);padding:1.5rem;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.1);width:100%;max-width:400px}.modal-content h3{margin-bottom:1.5rem;color:var(--primary-color);text-align:center}
+        .form-row{display:flex;flex-direction:column;margin-bottom:1rem}.form-row label{font-size:.9rem;color:var(--text-muted-color);margin-bottom:.25rem}.form-row input{border:1px solid var(--border-color);border-radius:8px;font-size:1rem;padding:.7rem;width:100%}
+        .modal-footer{margin-top:1.5rem;display:flex;gap:.5rem}
+        .card h3{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:2px solid var(--primary-color-light);font-size:1.1rem;font-weight:600;color:var(--primary-color)}
+        #productSearchResults,#purchaseItemSearchResults{max-height:150px;overflow-y:auto;border:1px solid var(--border-color);border-radius:8px}.product-search-item{padding:.75rem 1rem;cursor:pointer;border-bottom:1px solid var(--border-color)}
+        .price-options{display:flex;gap:.5rem}.price-options label{flex-grow:1;padding:.75rem;border:1px solid var(--border-color);border-radius:8px;text-align:center;cursor:pointer;transition:all .2s ease}
+        .price-options input[type=radio]:checked+label{background-color:var(--primary-color);color:#fff;border-color:var(--primary-color)}.price-options input[type=radio]{display:none}
+        .summary-table{width:100%;border-collapse:collapse}.summary-table th,.summary-table td{text-align:left;padding:.75rem .5rem;border-bottom:1px solid var(--primary-color-light)}.summary-table th:not(:first-child),.summary-table td:not(:first-child){text-align:right}
+        .margin-display{font-size:1.2rem;font-weight:700;margin-bottom:1rem;text-align:right}.margin-display span{color:var(--success-color)}
+        #paymentPage .card .label-text{color:var(--text-muted-color)}.card .amount-text{font-size:1.5rem;font-weight:700}
+        #paymentPage .balance-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.5rem}
+        #paymentPage input{width:100%;text-align:center;font-size:2.5rem;font-weight:700;border-radius:8px;border:2px solid var(--primary-color);padding:.5rem;margin-top:.5rem}
+        .order-card{padding:1rem;display:flex;justify-content:space-between;align-items:flex-start}.order-card-info{display:flex;flex-direction:column;gap:.25rem}.order-card-title{font-weight:600}.order-card-meta{font-size:.8rem;color:var(--text-muted-color)}.order-card-total{font-weight:700;font-size:1.1rem;color:var(--danger-color)}
+        .fab{position:fixed;bottom:20px;right:20px;width:56px;height:56px;background-color:var(--primary-color);color:#fff;border-radius:50%;border:none;font-size:24px;display:flex;justify-content:center;align-items:center;box-shadow:0 4px 12px rgba(0,0,0,.2);cursor:pointer;z-index:999;transition:transform .2s ease;display:none}.fab.active{display:flex}
+        #successOverlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:2000;display:none;justify-content:center;align-items:center;flex-direction:column;color:#fff;text-align:center}
+        #successOverlay.active{display:flex;animation:fadeIn .2s}
+        .checkmark__circle{stroke-dasharray:166;stroke-dashoffset:166;stroke-width:3;stroke-miterlimit:10;stroke:#fff;fill:none;animation:stroke .6s cubic-bezier(.65,0,.45,1) forwards}
+        .checkmark{width:80px;height:80px;border-radius:50%;display:block;stroke-width:3;stroke:#fff;stroke-miterlimit:10;margin:0 auto;box-shadow:inset 0 0 0 var(--success-color);animation:fill .4s ease-in-out .4s forwards,scale .3s ease-in-out .9s both}
+        .checkmark__check{transform-origin:50% 50%;stroke-dasharray:48;stroke-dashoffset:48;animation:stroke .3s cubic-bezier(.65,0,.45,1) .8s forwards}
+        @keyframes stroke{100%{stroke-dashoffset:0}}@keyframes scale{0%,100%{transform:none}50%{transform:scale3d(1.1,1.1,1)}}@keyframes fill{100%{box-shadow:inset 0 0 0 50px var(--success-color)}}
+        #successOverlay p{font-size:1.5rem;font-weight:600;margin-top:1rem}
     </style>
 </head>
 <body>
     <div id="mainAppPage" class="page active">
         <div class="app-container">
-            <header>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40"><path fill="#FFFFFF" d="M50,5 A45,45 0 1,1 49.9,5 Z M30,75 V25 h17 a12.5,12.5 0 0 1 0,25 h-17 v5 h12 a12.5,12.5 0 0 1 0,25 h-12 Z M65,25 L75,75 L85,25" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>PVR Sales</span>
-            </header>
-            <nav class="tabs"><button class="tab-button active" onclick="showTab('sale')">Sale</button><button class="tab-button" onclick="showTab('stock')">Stock</button><button class="tab-button" onclick="showTab('payment')">Payments</button></nav>
+            <header>PVR</header>
+            <nav class="tabs">
+                <button class="tab-button active" onclick="showTab('sale')">Sale</button>
+                <button class="tab-button" onclick="showTab('purchase')">Purchase</button>
+                <button class="tab-button" onclick="showTab('orders')">Orders</button>
+                <button class="tab-button" onclick="showTab('inventory')">Inventory</button>
+                <button class="tab-button" onclick="showTab('payments')">Payments</button>
+            </nav>
             <main>
                 <div id="saleTab" class="tab-content active"><input type="text" id="customerSearch" class="search-bar" onkeyup="renderCustomers()" placeholder="Search Customers..."><div id="customerList"></div></div>
-                <div id="stockTab" class="tab-content"><div id="stockList"></div></div>
-                <div id="paymentTab" class="tab-content"><input type="text" id="paymentSearch" class="search-bar" onkeyup="renderPayments()" placeholder="Search Customers..."><div id="paymentList"></div></div>
+                <div id="purchaseTab" class="tab-content"><input type="text" id="vendorSearch" class="search-bar" onkeyup="renderVendors()" placeholder="Search Vendors..."><div id="vendorList"></div></div>
+                <div id="ordersTab" class="tab-content"><div id="ordersList"></div></div>
+                <div id="inventoryTab" class="tab-content"><div id="inventoryList"></div></div>
+                <div id="paymentsTab" class="tab-content">
+                    <div class="sub-tabs">
+                        <button class="sub-tab-button active" onclick="showPaymentSubTab('receivables')">Receivables</button>
+                        <button class="sub-tab-button" onclick="showPaymentSubTab('payables')">Payables</button>
+                    </div>
+                    <div id="receivablesContent" class="tab-content active"></div>
+                    <div id="payablesContent" class="tab-content"></div>
+                </div>
             </main>
         </div>
+        <button id="fab" class="fab">+</button>
     </div>
-    <div id="orderPage" class="page">
-        <div class="app-container">
-            <header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="orderCustomerName"></h2></header>
-            <div class="page-content">
-                <div class="card"><h3>Step 1: Find Product</h3><input type="text" id="productSearch" class="search-bar" onkeyup="handleProductSearch()" placeholder="Type to search..."><div id="productSearchResults"></div></div>
-                <div id="item-entry-form" class="card" style="display: none;">
-                    <h3>Step 2: Add to Order</h3>
-                    <p id="selectedItemName" style="font-weight:bold; margin-bottom: 1rem;"></p>
-                    <div style="margin-bottom:1rem;"><label>Quantity</label><input type="number" id="itemQuantity" min="1" value="1" style="border:1px solid var(--border-color);padding:0.7rem;border-radius:8px;width:100%;"></div>
-                    <div style="margin-bottom:1rem;"><label>Select Price</label><div id="price-options-container" class="price-options"></div></div>
-                    <button class="btn btn-success" onclick="addItemToOrder()">Add to Order</button>
-                </div>
-                <div id="orderSummaryContainer" class="card" style="display: none;">
-                    <h3>Step 3: Review Summary</h3>
-                    <table class="summary-table"><thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead><tbody id="orderSummaryBody"></tbody></table>
-                </div>
-                <div id="receiptCard" class="card" style="display: none;">
-                    <div id="receiptImageContainer" class="receipt"></div>
-                    <button id="shareReceiptBtn" class="btn btn-primary" style="margin-top: 1rem;" onclick="shareReceipt()">Share as Image &#x27A4;</button>
-                </div>
-            </div>
-            <footer class="page-footer" id="order-footer">
-                <div class="margin-display">Total Margin: <span id="totalMargin"></span></div>
-                <button id="confirm-order-btn" class="btn btn-primary" onclick="confirmOrder()">Confirm Order</button>
-            </footer>
-        </div>
-    </div>
-    <div id="paymentPage" class="page">
-        <div class="app-container">
-            <header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="paymentCustomerName"></h2></header>
-            <div class="page-content" style="padding:1rem;">
-                <div class="card">
-                    <div class="balance-row"><span class="label-text">Current Balance</span><span class="amount-text" style="color:var(--danger-color);" id="currentBalanceText"></span></div>
-                    <hr style="border:none; border-top:1px solid var(--border-color); margin: 1rem 0;">
-                    <label for="paymentAmountInput" class="label-text">Enter Amount Received</label>
-                    <input type="number" id="paymentAmountInput" placeholder="0.00" onkeyup="updateNewBalance()">
-                    <hr style="border:none; border-top:1px solid var(--border-color); margin: 1rem 0;">
-                    <div class="balance-row"><span class="label-text">New Balance</span><span class="amount-text" style="color:var(--success-color);" id="newBalanceText"></span></div>
-                </div>
-            </div>
-            <footer class="page-footer"><button class="btn btn-success" onclick="confirmPayment()">Confirm Payment</button></footer>
-        </div>
-    </div>
-    <div id="stockEditModal" class="modal-overlay">
-        <div class="modal-content">
-            <h3 id="stockModalTitle">Edit Stock</h3>
-            <div class="form-row"><label>Stock (Qty)</label><input type="number" id="stockModalClstock"></div>
-            <div class="form-row"><label>Cost Rate</label><input type="number" id="stockModalCostRate"></div>
-            <div class="form-row"><label>Price 1 (MRP)</label><input type="number" id="stockModalPrice1"></div>
-            <div class="form-row"><label>Price 2</label><input type="number" id="stockModalPrice2"></div>
-            <div class="form-row"><label>Price 3</label><input type="number" id="stockModalPrice3"></div>
-            <div class="modal-footer">
-                <button class="btn" style="background-color: var(--text-muted-color); color:white;" onclick="closeStockModal()">Cancel</button>
-                <button class="btn btn-success" onclick="confirmStockEdit()">Save Changes</button>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script>
-    const initialCustomers = [{CustomerCode:"C001",Customer:"SALALA BAKERY",Contact:"9999999999",Outstanding:10},{CustomerCode:"C002",Customer:"AKBAR IRIKKUR",Contact:"9999999999",Outstanding:10},{CustomerCode:"C003",Customer:"RAFEEK P K",Contact:"9999999999",Outstanding:0},{CustomerCode:"C004",Customer:"MUNEER E K",Contact:"9999999999",Outstanding:50.5},{CustomerCode:"C005",Customer:"ASARUDHEEN",Contact:"9999999999",Outstanding:0},{CustomerCode:"C006",Customer:"METRO",Contact:"9999999999",Outstanding:120},{CustomerCode:"C007",Customer:"RIYAS P V",Contact:"9947737732",Outstanding:10}];
-    const initialItems = [{ItemName:"YELLOW MIXTURE",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10},{ItemName:"RED MIXTURE",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10},{ItemName:"PAYYOLI MIXTURE",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10},{ItemName:"MASALA KOONTHI",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10},{ItemName:"MADURA KOONTHI",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10}];
-    let customers=[],items=[],currentOrder=[],currentCustomer=null,currentPaymentCustomer=null,selectedProduct=null,currentEditingItem=null;
+    <!-- Transaction Pages -->
+    <div id="orderPage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="orderCustomerName"></h2></header><div class="page-content"><div class="card"><h3>Step 1: Find Product</h3><input type="text" id="productSearch" class="search-bar" onkeyup="handleProductSearch()" placeholder="Type to search..."><div id="productSearchResults"></div></div><div id="item-entry-form" class="card" style="display: none;"><h3>Step 2: Add to Order</h3><p id="selectedItemName" style="font-weight:bold; margin-bottom: 1rem;"></p><div style="margin-bottom:1rem;"><label>Quantity</label><input type="number" id="itemQuantity" min="1" value="1" style="border:1px solid var(--border-color);padding:0.7rem;border-radius:8px;width:100%;"></div><div style="margin-bottom:1rem;"><label>Select Price</label><div id="price-options-container" class="price-options"></div></div><button class="btn btn-success" onclick="addItemToOrder()">Add to Order</button></div><div id="orderSummaryContainer" class="card" style="display: none;"><h3>Step 3: Review Summary</h3><table class="summary-table"><thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead><tbody id="orderSummaryBody"></tbody></table></div></div><footer class="page-footer" id="order-footer"><div class="margin-display">Total Margin: <span id="totalMargin"></span></div><button id="confirm-order-btn" class="btn btn-primary" onclick="confirmOrder()">Confirm Order</button></footer></div></div>
+    <div id="purchasePage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="purchaseVendorName"></h2></header><div class="page-content"><div class="card"><h3>Step 1: Find Item</h3><input type="text" id="purchaseItemSearch" class="search-bar" onkeyup="handlePurchaseItemSearch()" placeholder="Type to search..."><div id="purchaseItemSearchResults"></div></div><div id="purchase-entry-form" class="card" style="display: none;"><h3>Step 2: Add to Purchase</h3><p id="selectedPurchaseItemName" style="font-weight:bold; margin-bottom: 1rem;"></p><div style="display:flex;gap:1rem;margin-bottom:1rem;"><div style="flex-grow:1;"><label>Quantity</label><input type="number" id="purchaseQuantity" min="1" value="1" style="border:1px solid var(--border-color);padding:.7rem;border-radius:8px;width:100%;"></div><div style="flex-grow:1;"><label>Cost Rate</label><input type="number" id="purchaseCost" style="border:1px solid var(--border-color);padding:.7rem;border-radius:8px;width:100%;"></div></div><button class="btn btn-success" onclick="addItemToPurchase()">Add to Purchase</button></div><div id="purchaseSummaryContainer" class="card" style="display: none;"><h3>Step 3: Purchase Summary</h3><table class="summary-table"><thead><tr><th>Item</th><th>Qty</th><th>Cost</th><th>Total</th></tr></thead><tbody id="purchaseSummaryBody"></tbody></table></div></div><footer class="page-footer" id="purchase-footer"><div class="margin-display">Purchase Total: <span id="purchaseTotal" style="color:var(--danger-color)"></span></div><button id="confirm-purchase-btn" class="btn btn-primary" onclick="confirmPurchase()">Confirm Purchase</button></footer></div></div>
+    <div id="paymentPage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="paymentPartyName"></h2></header><div class="page-content" style="padding:1rem;"><div class="card"><div class="balance-row"><span class="label-text" id="currentBalanceLabel">Current Balance</span><span class="amount-text" style="color:var(--danger-color);" id="currentBalanceText"></span></div><hr style="border:none; border-top:1px solid var(--border-color); margin: 1rem 0;"><label for="paymentAmountInput" class="label-text" id="paymentInputLabel">Enter Amount</label><input type="number" id="paymentAmountInput" placeholder="0.00" onkeyup="updateNewBalance()"><hr style="border:none; border-top:1px solid var(--border-color); margin: 1rem 0;"><div class="balance-row"><span class="label-text">New Balance</span><span class="amount-text" style="color:var(--success-color);" id="newBalanceText"></span></div></div></div><footer class="page-footer"><button class="btn btn-success" onclick="confirmPayment()">Confirm Payment</button></footer></div></div>
+    
+    <!-- Modals -->
+    <div id="stockEditModal" class="modal-overlay"><div class="modal-content"><h3 id="stockModalTitle">Edit Stock</h3><div class="form-row"><label>Stock (Qty)</label><input type="number" id="stockModalClstock"></div><div class="form-row"><label>Cost Rate</label><input type="number" id="stockModalCostRate"></div><div class="form-row"><label>Price 1 (MRP)</label><input type="number" id="stockModalPrice1"></div><div class="form-row"><label>Price 2</label><input type="number" id="stockModalPrice2"></div><div class="form-row"><label>Price 3</label><input type="number" id="stockModalPrice3"></div><div class="modal-footer"><button class="btn" style="background-color: var(--text-muted-color); color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="confirmStockEdit()">Save Changes</button></div></div></div>
+    <div id="addCustomerModal" class="modal-overlay"><div class="modal-content"><h3>Add New Customer</h3><div class="form-row"><label>Customer Name</label><input type="text" id="newCustomerName"></div><div class="form-row"><label>Contact</label><input type="number" id="newCustomerContact"></div><div class="modal-footer"><button class="btn" style="background-color: var(--text-muted-color); color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewCustomer()">Save Customer</button></div></div></div>
+    <div id="addVendorModal" class="modal-overlay"><div class="modal-content"><h3>Add New Vendor</h3><div class="form-row"><label>Vendor Name</label><input type="text" id="newVendorName"></div><div class="form-row"><label>Contact</label><input type="number" id="newVendorContact"></div><div class="modal-footer"><button class="btn" style="background-color: var(--text-muted-color); color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewVendor()">Save Vendor</button></div></div></div>
+    <div id="addItemModal" class="modal-overlay"><div class="modal-content"><h3>Add New Item</h3><div class="form-row"><label>Item Name</label><input type="text" id="newItemName"></div><div class="form-row"><label>Cost Rate</label><input type="number" id="newItemCostRate"></div><div class="form-row"><label>MRP</label><input type="number" id="newItemMrp"></div><div class="form-row"><label>Initial Stock</label><input type="number" id="newItemClstock"></div><div class="modal-footer"><button class="btn" style="background-color: var(--text-muted-color); color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewItem()">Save Item</button></div></div></div>
 
+    <div id="successOverlay"><svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg><p id="successMessage"></p></div>
+
+    <script>
+    const initialCustomers = [{CustomerCode:"C001",Customer:"SALALA BAKERY",Contact:"9999999999",Outstanding:10},{CustomerCode:"C002",Customer:"AKBAR IRIKKUR",Contact:"9999999999",Outstanding:10}];
+    const initialItems = [{ItemName:"YELLOW MIXTURE",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10},{ItemName:"RED MIXTURE",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10}];
+    const initialVendors = [{VendorCode:"V001",VendorName:"AMAL TRADERS",Contact:"9876543210",AmountDue:1500},{VendorCode:"V002",VendorName:"NATIONAL AGENCIES",Contact:"9876543211",AmountDue:0}];
+    let customers=[],items=[],vendors=[],salesOrders=[],purchaseOrders=[],currentOrder=[],currentPurchase=[],currentCustomer=null,currentVendor=null,currentPaymentParty=null,selectedProduct=null,currentEditingItem=null,paymentType=null;
+    
     const formatCurrency = (num) => (num || 0).toLocaleString("en-IN",{style:"currency",currency:"INR"});
-    const saveData = () => {localStorage.setItem("pvr-data-final-pwa",JSON.stringify({customers,items}))};
-    const loadData = () => {const data=JSON.parse(localStorage.getItem("pvr-data-final-pwa"));customers=data?.customers||initialCustomers,items=data?.items||initialItems,data||saveData()};
+    const saveData = () => {localStorage.setItem("pvr-data-v11",JSON.stringify({customers,items,vendors,salesOrders,purchaseOrders}))};
+    const loadData = () => {const data=JSON.parse(localStorage.getItem("pvr-data-v11"));customers=data?.customers||initialCustomers;items=data?.items||initialItems;vendors=data?.vendors||initialVendors;salesOrders=data?.salesOrders||[];purchaseOrders=data?.purchaseOrders||[];data||saveData()};
+    
     const showPage = (pageId) => {document.querySelectorAll(".page").forEach(p=>p.classList.remove("active")),document.getElementById(pageId).classList.add("active")};
-    const showMainPage = () => {showPage("mainAppPage"),renderCustomers(),renderPayments()};
-    const showTab = (tabName) => {document.querySelectorAll(".tab-content, .tab-button").forEach(el=>el.classList.remove("active")),document.getElementById(`${tabName}Tab`).classList.add("active"),document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`).classList.add("active")};
-    const renderCustomers = () => {const list=document.getElementById("customerList"),term=document.getElementById("customerSearch").value.toLowerCase(),filtered=customers.filter(c=>c.Customer.toLowerCase().includes(term));list.innerHTML=filtered.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No customers found.</p>`:filtered.map(c=>`<div class="card list-card"><div><div class="list-card-title">${c.Customer}</div><div class="list-card-balance ${c.Outstanding>0?"due":"zero"}">Total Balance: ${formatCurrency(c.Outstanding)}</div></div><button class="btn btn-primary btn-small" onclick="startOrder('${c.CustomerCode}')">Take Order</button></div>`).join("")};
-    const renderStock = () => {document.getElementById("stockList").innerHTML=items.map(i=>`<div class="card list-card"><div><div class="list-card-title">${i.ItemName}</div><div style="font-size:0.8rem;color:var(--text-muted-color);">Stock: ${i.Clstock} | Cost: ${formatCurrency(i.CostRate)}</div></div><button class="btn btn-primary btn-small" onclick="openStockModal('${i.ItemName}')">Edit</button></div>`).join("")};
-    const renderPayments = () => {const list=document.getElementById("paymentList"),term=document.getElementById("paymentSearch").value.toLowerCase(),filtered=customers.filter(c=>c.Customer.toLowerCase().includes(term));list.innerHTML=filtered.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No customers found.</p>`:filtered.sort((a,b)=>b.Outstanding-a.Outstanding).map(c=>`<div class="card list-card"><div><div class="list-card-title">${c.Customer}</div><div class="list-card-balance ${c.Outstanding>0?"due":"zero"}">Total Balance: ${formatCurrency(c.Outstanding)}</div></div>${c.Outstanding>0?`<button class="btn btn-success btn-small" onclick="showPaymentPage('${c.CustomerCode}')">Collect</button>`:""}</div>`).join("")};
+    const showMainPage = () => {showPage("mainAppPage");renderAllLists()};
+    const showTab = (tabName) => {document.querySelectorAll(".tab-content, .tab-button").forEach(el=>el.classList.remove("active"));document.getElementById(`${tabName}Tab`).classList.add("active"),document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`).classList.add("active");updateFab(tabName);"payments"===tabName&&showPaymentSubTab("receivables")};
+    const showPaymentSubTab = (subTab) => {document.querySelectorAll("#paymentsTab .tab-content, #paymentsTab .sub-tab-button").forEach(el=>el.classList.remove("active"));document.getElementById(`${subTab}Content`).classList.add("active"),document.querySelector(`.sub-tab-button[onclick="showPaymentSubTab('${subTab}')"]`).classList.add("active")};
+    const showSuccessAnimation = (message) => {document.getElementById("successMessage").textContent=message;const overlay=document.getElementById("successOverlay");overlay.classList.add("active");setTimeout(()=>overlay.classList.remove("active"),1800)};
+
+    const renderAllLists = () => {renderCustomers();renderVendors();renderOrders();renderInventory();renderReceivables();renderPayables()};
+    const renderCustomers = () => {const list=document.getElementById("customerList"),term=document.getElementById("customerSearch").value.toLowerCase(),filtered=customers.filter(c=>c.Customer.toLowerCase().includes(term));list.innerHTML=filtered.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No customers found.</p>`:filtered.map(c=>`<div class="card list-card"><div><div class="list-card-title">${c.Customer}</div><div class="list-card-balance ${c.Outstanding>0?"due":"zero"}">Balance: ${formatCurrency(c.Outstanding)}</div></div><button class="btn btn-primary btn-small" onclick="startOrder('${c.CustomerCode}')">Sale</button></div>`).join("")};
+    const renderVendors = () => {const list=document.getElementById("vendorList"),term=document.getElementById("vendorSearch").value.toLowerCase(),filtered=vendors.filter(v=>v.VendorName.toLowerCase().includes(term));list.innerHTML=filtered.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No vendors found.</p>`:filtered.map(v=>`<div class="card list-card"><div><div class="list-card-title">${v.VendorName}</div><div class="list-card-balance ${v.AmountDue>0?"due":"zero"}">Amount Due: ${formatCurrency(v.AmountDue)}</div></div><button class="btn btn-primary btn-small" onclick="startPurchase('${v.VendorCode}')">Purchase</button></div>`).join("")};
+    const renderOrders = () => {const list=document.getElementById("ordersList");list.innerHTML=salesOrders.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No sales orders recorded.</p>`:salesOrders.slice().reverse().map(o=>`<div class="card order-card"><div class="order-card-info"><span class="order-card-title">${o.customerName}</span><span class="order-card-meta">ID: ${o.orderId} | Date: ${o.date}</span></div><span class="order-card-total">${formatCurrency(o.totalAmount)}</span></div>`).join("")};
+    const renderInventory = () => {document.getElementById("inventoryList").innerHTML=items.map(i=>`<div class="card list-card"><div><div class="list-card-title">${i.ItemName}</div><div style="font-size:0.8rem;color:var(--text-muted-color);">Stock: ${i.Clstock} | Cost: ${formatCurrency(i.CostRate)}</div></div><button class="btn btn-primary btn-small" onclick="openStockModal('${i.ItemName}')">Edit</button></div>`).join("")};
+    const renderReceivables = () => {document.getElementById("receivablesContent").innerHTML=customers.filter(c=>c.Outstanding!=0).sort((a,b)=>b.Outstanding-a.Outstanding).map(c=>`<div class="card list-card"><div><div class="list-card-title">${c.Customer}</div><div class="list-card-balance due">Balance: ${formatCurrency(c.Outstanding)}</div></div><button class="btn btn-success btn-small" onclick="showPaymentPage('customer','${c.CustomerCode}')">Collect</button></div>`).join("")};
+    const renderPayables = () => {document.getElementById("payablesContent").innerHTML=vendors.filter(v=>v.AmountDue!=0).sort((a,b)=>b.AmountDue-a.AmountDue).map(v=>`<div class="card list-card"><div><div class="list-card-title">${v.VendorName}</div><div class="list-card-balance due">Due: ${formatCurrency(v.AmountDue)}</div></div><button class="btn btn-success btn-small" onclick="showPaymentPage('vendor','${v.VendorCode}')">Pay</button></div>`).join("")};
+    
     const openStockModal = (itemName) => {currentEditingItem=items.find(i=>i.ItemName===itemName);document.getElementById("stockModalTitle").textContent=`Edit: ${currentEditingItem.ItemName}`;["Clstock","CostRate","Price1","Price2","Price3"].forEach(field=>document.getElementById(`stockModal${field}`).value=currentEditingItem[field]);document.getElementById("stockEditModal").classList.add("active")};
-    const closeStockModal = () => {document.getElementById("stockEditModal").classList.remove("active")};
-    const confirmStockEdit = () => {["Clstock","CostRate","Price1","Price2","Price3"].forEach(field=>currentEditingItem[field]=parseFloat(document.getElementById(`stockModal${field}`).value)||0);saveData();renderStock();closeStockModal()};
-    const showPaymentPage = (customerCode) => {currentPaymentCustomer=customers.find(c=>c.CustomerCode===customerCode);document.getElementById("paymentCustomerName").textContent=`Payment from ${currentPaymentCustomer.Customer}`;document.getElementById("currentBalanceText").textContent=formatCurrency(currentPaymentCustomer.Outstanding);document.getElementById("paymentAmountInput").value="";updateNewBalance();showPage("paymentPage");document.getElementById("paymentAmountInput").focus()};
-    const updateNewBalance = () => {const payment=parseFloat(document.getElementById("paymentAmountInput").value)||0;document.getElementById("newBalanceText").textContent=formatCurrency(currentPaymentCustomer.Outstanding-payment)};
-    const confirmPayment = () => {const payment=parseFloat(document.getElementById("paymentAmountInput").value)||0;if(payment<=0)return alert("Please enter a valid amount.");currentPaymentCustomer.Outstanding-=payment;saveData();alert(`Payment of ${formatCurrency(payment)} collected!`);showMainPage()};
-    const startOrder = (customerCode) => {currentCustomer=customers.find(c=>c.CustomerCode===customerCode);currentOrder=[];document.getElementById("orderCustomerName").textContent=`Order for ${currentCustomer.Customer}`;["item-entry-form","orderSummaryContainer","receiptCard"].forEach(id=>document.getElementById(id).style.display="none");document.getElementById("order-footer").style.display="block";resetOrderForm();renderOrderSummary();showPage("orderPage")};
+    const closeAllModals = () => document.querySelectorAll(".modal-overlay").forEach(m=>m.classList.remove("active"));
+    const confirmStockEdit = () => {["Clstock","CostRate","Price1","Price2","Price3"].forEach(field=>currentEditingItem[field]=parseFloat(document.getElementById(`stockModal${field}`).value)||0);saveData();renderInventory();closeAllModals()};
+    
+    const showPaymentPage = (type, code) => {
+        paymentType=type;
+        if(type==='customer'){currentPaymentParty=customers.find(c=>c.CustomerCode===code);document.getElementById("paymentPartyName").textContent=`Payment from ${currentPaymentParty.Customer}`;document.getElementById("currentBalanceLabel").textContent="Current Balance";}
+        else{currentPaymentParty=vendors.find(v=>v.VendorCode===code);document.getElementById("paymentPartyName").textContent=`Payment to ${currentPaymentParty.VendorName}`;document.getElementById("currentBalanceLabel").textContent="Current Amount Due";}
+        document.getElementById("currentBalanceText").textContent=formatCurrency(type==='customer'?currentPaymentParty.Outstanding:currentPaymentParty.AmountDue);
+        document.getElementById("paymentAmountInput").value="";updateNewBalance();showPage("paymentPage");document.getElementById("paymentAmountInput").focus();
+    };
+    const updateNewBalance = () => {const payment=parseFloat(document.getElementById("paymentAmountInput").value)||0;const currentBalance=paymentType==='customer'?currentPaymentParty.Outstanding:currentPaymentParty.AmountDue;document.getElementById("newBalanceText").textContent=formatCurrency(currentBalance-payment)};
+    const confirmPayment = () => {const payment=parseFloat(document.getElementById("paymentAmountInput").value)||0;if(payment<=0)return alert("Please enter a valid amount.");paymentType==='customer'?currentPaymentParty.Outstanding-=payment:currentPaymentParty.AmountDue-=payment;saveData();showSuccessAnimation("Payment Recorded!");setTimeout(()=>showMainPage(),1800)};
+
+    const startOrder = (customerCode) => {currentCustomer=customers.find(c=>c.CustomerCode===customerCode);currentOrder=[];document.getElementById("orderCustomerName").textContent=`Order for ${currentCustomer.Customer}`;["item-entry-form","orderSummaryContainer"].forEach(id=>document.getElementById(id).style.display="none");document.getElementById("order-footer").style.display="block";resetOrderForm();renderOrderSummary();showPage("orderPage")};
     const resetOrderForm = () => {document.getElementById("productSearch").value="";document.getElementById("productSearchResults").innerHTML="";document.getElementById("item-entry-form").style.display="none";document.getElementById("itemQuantity").value=1};
     const handleProductSearch = () => {const term=document.getElementById("productSearch").value.toLowerCase(),results=document.getElementById("productSearchResults");results.innerHTML=term.length<2?"":items.filter(i=>i.ItemName.toLowerCase().includes(term)&&i.Clstock>0).map(i=>`<div class="product-search-item" onclick="selectProductForOrder('${i.ItemName}')">${i.ItemName} <small>(Stock: ${i.Clstock})</small></div>`).join("")};
     const selectProductForOrder = (itemName) => {selectedProduct=items.find(i=>i.ItemName===itemName);resetOrderForm();document.getElementById("item-entry-form").style.display="block";document.getElementById("selectedItemName").textContent=selectedProduct.ItemName;document.getElementById("price-options-container").innerHTML=[1,2,3].map(n=>`<input type="radio" name="price" id="price${n}" value="${selectedProduct["Price"+n]}" ${n===1?"checked":""}><label for="price${n}">${formatCurrency(selectedProduct["Price"+n])}</label>`).join("");document.getElementById("itemQuantity").focus()};
-    const addItemToOrder = () => {const qty=parseInt(document.getElementById("itemQuantity").value),price=parseFloat(document.querySelector('input[name="price"]:checked').value);if(!selectedProduct||isNaN(qty)||qty<=0)return alert("Invalid quantity.");if(qty>selectedProduct.Clstock)return alert(`Not enough stock. Only ${selectedProduct.Clstock} available.`);const existing=currentOrder.find(i=>i.name===selectedProduct.ItemName&&i.price===price);if(existing){existing.quantity+=qty;existing.total=existing.quantity*existing.price}else{currentOrder.push({name:selectedProduct.ItemName,quantity:qty,price:price,total:qty*price,cost:selectedProduct.CostRate,mrp:selectedProduct.Mrp})}document.getElementById("orderSummaryContainer").style.display="block";renderOrderSummary();resetOrderForm()};
-    const renderOrderSummary = () => {const body=document.getElementById("orderSummaryBody");let margin=0;body.innerHTML=currentOrder.length===0?`<tr><td colspan="4" style="text-align:center;color:var(--text-muted-color)">No items added.</td></tr>`:currentOrder.map(i=>{margin+=(i.price-i.cost)*i.quantity;return`<tr><td>${i.name}</td><td>${i.quantity}</td><td>${i.price.toFixed(2)}</td><td>${i.total.toFixed(2)}</td></tr>`}).join("");document.getElementById("totalMargin").textContent=formatCurrency(margin)};
-    const confirmOrder = () => {if(currentOrder.length===0)return alert("Cannot confirm an empty order.");const originalBalance=currentCustomer.Outstanding;let orderTotal=0;currentOrder.forEach(orderItem=>{const stockItem=items.find(i=>i.ItemName===orderItem.name);if(stockItem)stockItem.Clstock-=orderItem.quantity;orderTotal+=orderItem.total});currentCustomer.Outstanding+=orderTotal;saveData();generateReceipt(orderTotal,originalBalance,currentCustomer.Outstanding);document.getElementById("receiptCard").style.display="block";document.getElementById("order-footer").style.display="none"};
-    const generateReceipt = (orderTotal, oldBalance, newBalance) => {const dateStr=(new Date).toLocaleDateString("en-GB"),container=document.getElementById("receiptImageContainer");container.innerHTML=`<div class="receipt-header"><h3>PVR DISTRIBUTION</h3><div class="address-block"><p>Iritty, Punnad</p><p>9447250786 | pvrdistribution@gmail.com</p></div></div><div class="receipt-line"><span><strong>Customer:</strong> ${currentCustomer.Customer}</span><span><strong>Date:</strong> ${dateStr}</span></div><div class="receipt-table-header"><span>Item</span><span>Qty</span><span>MRP</span><span>Price</span><span>Total</span></div>`+currentOrder.map(i=>`<div class="receipt-table-item"><span>${i.name}</span><span>${i.quantity}</span><span>${i.mrp.toFixed(2)}</span><span>${i.price.toFixed(2)}</span><span>${i.total.toFixed(2)}</span></div>`).join("")+`<div class="receipt-totals"><div class="receipt-line"><span>Total Purchase:</span> <span>${formatCurrency(orderTotal)}</span></div><div class="receipt-line"><span>Previous Balance:</span> <span>${formatCurrency(oldBalance)}</span></div><div class="receipt-line receipt-final-total"><span>TOTAL BALANCE:</span> <span>${formatCurrency(newBalance)}</span></div></div><div class="receipt-footer">Thank You!</div>`};
-    const shareReceipt = async () => {const el=document.getElementById("receiptImageContainer"),btn=document.getElementById("shareReceiptBtn");btn.textContent="Processing...";try{const canvas=await html2canvas(el,{scale:2,backgroundColor:"#ffffff"}),blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png")),file=new File([blob],"receipt.png",{type:"image/png"});if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:"PVR Distribution Receipt",text:`Receipt for ${currentCustomer.Customer}`})}else{alert("Image sharing not supported on this browser.")}}catch(err){alert("Could not share receipt.")}finally{btn.textContent="Share as Image \u27A4"}};
-    document.addEventListener("DOMContentLoaded",()=>{loadData();renderCustomers();renderStock();renderPayments();showPage("mainAppPage");showTab("sale")});
+    const addItemToOrder = () => {const qty=parseInt(document.getElementById("itemQuantity").value),price=parseFloat(document.querySelector('input[name="price"]:checked').value);if(!selectedProduct||isNaN(qty)||qty<=0)return alert("Invalid quantity.");if(qty>selectedProduct.Clstock)return alert(`Not enough stock. Only ${selectedProduct.Clstock} available.`);const existing=currentOrder.find(i=>i.name===selectedProduct.ItemName&&i.price===price);if(existing){existing.quantity+=qty;existing.total=existing.quantity*existing.price}else{currentOrder.push({name:selectedProduct.ItemName,quantity:qty,price:price,total:qty*price,cost:selectedProduct.CostRate})}document.getElementById("orderSummaryContainer").style.display="block";renderOrderSummary();resetOrderForm()};
+    const renderOrderSummary = () => {const body=document.getElementById("orderSummaryBody");let margin=0;body.innerHTML=currentOrder.length===0?`<tr><td colspan="4" class="text-center text-muted">No items added.</td></tr>`:currentOrder.map(i=>{margin+=(i.price-i.cost)*i.quantity;return`<tr><td>${i.name}</td><td>${i.quantity}</td><td>${i.price.toFixed(2)}</td><td>${i.total.toFixed(2)}</td></tr>`}).join("");document.getElementById("totalMargin").textContent=formatCurrency(margin)};
+    const confirmOrder = () => {if(currentOrder.length===0)return alert("Cannot confirm an empty order.");let orderTotal=0;currentOrder.forEach(orderItem=>{const stockItem=items.find(i=>i.ItemName===orderItem.name);if(stockItem)stockItem.Clstock-=orderItem.quantity;orderTotal+=orderItem.total});currentCustomer.Outstanding+=orderTotal;const newOrder={orderId:Date.now(),customerCode:currentCustomer.CustomerCode,customerName:currentCustomer.Customer,date:new Date().toLocaleDateString("en-GB"),totalAmount:orderTotal,items:currentOrder};salesOrders.push(newOrder);saveData();showSuccessAnimation("Order Confirmed!");setTimeout(()=>showMainPage(),1800)};
+    
+    const startPurchase = (vendorCode) => {currentVendor=vendors.find(v=>v.VendorCode===vendorCode);currentPurchase=[];document.getElementById("purchaseVendorName").textContent=`Purchase from ${currentVendor.VendorName}`;["purchase-entry-form","purchaseSummaryContainer"].forEach(id=>document.getElementById(id).style.display="none");resetPurchaseForm();renderPurchaseSummary();showPage("purchasePage")};
+    const resetPurchaseForm = () => {document.getElementById("purchaseItemSearch").value="";document.getElementById("purchaseItemSearchResults").innerHTML="";document.getElementById("purchase-entry-form").style.display="none";document.getElementById("purchaseQuantity").value=1;document.getElementById("purchaseCost").value=""};
+    const handlePurchaseItemSearch = () => {const term=document.getElementById("purchaseItemSearch").value.toLowerCase(),results=document.getElementById("purchaseItemSearchResults");results.innerHTML=term.length<1?"":items.map(i=>`<div class="product-search-item" onclick="selectItemForPurchase('${i.ItemName}')">${i.ItemName}</div>`).join("")};
+    const selectItemForPurchase = (itemName) => {selectedProduct=items.find(i=>i.ItemName===itemName);resetPurchaseForm();document.getElementById("purchase-entry-form").style.display="block";document.getElementById("selectedPurchaseItemName").textContent=selectedProduct.ItemName;document.getElementById("purchaseCost").value=selectedProduct.CostRate;document.getElementById("purchaseQuantity").focus()};
+    const addItemToPurchase = () => {const qty=parseInt(document.getElementById("purchaseQuantity").value),cost=parseFloat(document.getElementById("purchaseCost").value);if(!selectedProduct||isNaN(qty)||qty<=0||isNaN(cost))return alert("Invalid quantity or cost.");const existing=currentPurchase.find(i=>i.name===selectedProduct.ItemName&&i.cost===cost);if(existing){existing.quantity+=qty;existing.total=existing.quantity*existing.cost}else{currentPurchase.push({name:selectedProduct.ItemName,quantity:qty,cost:cost,total:qty*cost})}document.getElementById("purchaseSummaryContainer").style.display="block";renderPurchaseSummary();resetPurchaseForm()};
+    const renderPurchaseSummary = () => {const body=document.getElementById("purchaseSummaryBody");let total=0;body.innerHTML=currentPurchase.length===0?`<tr><td colspan="4" class="text-center text-muted">No items added.</td></tr>`:currentPurchase.map(i=>{total+=i.total;return`<tr><td>${i.name}</td><td>${i.quantity}</td><td>${i.cost.toFixed(2)}</td><td>${i.total.toFixed(2)}</td></tr>`}).join("");document.getElementById("purchaseTotal").textContent=formatCurrency(total)};
+    const confirmPurchase = () => {if(currentPurchase.length===0)return alert("Cannot confirm an empty purchase.");let purchaseTotal=0;currentPurchase.forEach(pItem=>{const stockItem=items.find(i=>i.ItemName===pItem.name);if(stockItem)stockItem.Clstock+=pItem.quantity;purchaseTotal+=pItem.total});currentVendor.AmountDue+=purchaseTotal;const newPurchase={purchaseId:Date.now(),vendorCode:currentVendor.VendorCode,vendorName:currentVendor.VendorName,date:new Date().toLocaleDateString("en-GB"),totalAmount:purchaseTotal,items:currentPurchase};purchaseOrders.push(newPurchase);saveData();showSuccessAnimation("Purchase Recorded!");setTimeout(()=>showMainPage(),1800)};
+    
+    const updateFab = (tab) => {const fab=document.getElementById("fab");const actions={sale:()=>openAddModal("customer"),purchase:()=>openAddModal("vendor"),inventory:()=>openAddModal("item")};if(actions[tab]){fab.onclick=actions[tab];fab.classList.add("active")}else{fab.classList.remove("active")}};
+    const openAddModal = (type) => {closeAllModals();document.getElementById(`add${type.charAt(0).toUpperCase()+type.slice(1)}Modal`).classList.add("active")};
+    const saveNewCustomer = () => {const name=document.getElementById("newCustomerName").value.trim(),contact=document.getElementById("newCustomerContact").value;if(!name)return alert("Customer name cannot be empty.");customers.push({CustomerCode:`C${Date.now()}`,Customer:name,Contact:contact,Outstanding:0});saveData();renderCustomers();closeAllModals()};
+    const saveNewVendor = () => {const name=document.getElementById("newVendorName").value.trim(),contact=document.getElementById("newVendorContact").value;if(!name)return alert("Vendor name cannot be empty.");vendors.push({VendorCode:`V${Date.now()}`,VendorName:name,Contact:contact,AmountDue:0});saveData();renderVendors();closeAllModals()};
+    const saveNewItem = () => {const name=document.getElementById("newItemName").value.trim(),cost=parseFloat(document.getElementById("newItemCostRate").value)||0,mrp=parseFloat(document.getElementById("newItemMrp").value)||0,stock=parseInt(document.getElementById("newItemClstock").value)||0;if(!name)return alert("Item name cannot be empty.");items.push({ItemName:name,CostRate:cost,Mrp:mrp,Price1:mrp*.9,Price2:mrp*.85,Price3:mrp*.8,Clstock:stock});saveData();renderInventory();closeAllModals()};
+
+    document.addEventListener("DOMContentLoaded",()=>{loadData();renderAllLists();showPage("mainAppPage");showTab("sale")});
     </script>
 </body>
 </html>
