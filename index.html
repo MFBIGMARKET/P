@@ -93,7 +93,7 @@
         <button id="fab" class="fab">+</button>
     </div>
     <!-- Transaction Pages -->
-    <div id="orderPage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="orderCustomerName"></h2></header><div class="page-content"><div class="card"><h3>Step 1: Find Product</h3><input type="text" id="productSearch" class="search-bar" onkeyup="handleProductSearch()" placeholder="Type to search..."><div id="productSearchResults"></div></div><div id="item-entry-form" class="card" style="display: none;"><h3>Step 2: Add to Order</h3><p id="selectedItemName" style="font-weight:bold; margin-bottom: 1rem;"></p><div style="margin-bottom:1rem;"><label>Quantity</label><input type="number" id="itemQuantity" min="1" value="1" style="border:1px solid var(--border-color);padding:0.7rem;border-radius:8px;width:100%;"></div><div style="margin-bottom:1rem;"><label>Select Price</label><div id="price-options-container" class="price-options"></div></div><button class="btn btn-success" onclick="addItemToOrder()">Add to Order</button></div><div id="orderSummaryContainer" class="card" style="display: none;"><h3>Step 3: Review Summary</h3><table class="summary-table"><thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead><tbody id="orderSummaryBody"></tbody></table></div></div><footer class="page-footer" id="order-footer"><div class="margin-display">Total Margin: <span id="totalMargin"></span></div><button id="confirm-order-btn" class="btn btn-primary" onclick="confirmOrder()">Confirm Order</button></footer></div></div>
+    <div id="orderPage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="orderCustomerName"></h2></header><div class="page-content"><div class="card"><h3>Step 1: Find Product</h3><input type="text" id="productSearch" class="search-bar" onkeyup="handleProductSearch()" placeholder="Type to search..."><div id="productSearchResults"></div></div><div id="item-entry-form" class="card" style="display: none;"><h3>Step 2: Add to Order</h3><p id="selectedItemName" style="font-weight:bold; margin-bottom: 1rem;"></p><div style="margin-bottom:1rem;"><label>Quantity</label><input type="number" id="itemQuantity" min="1" value="1" style="border:1px solid var(--border-color);padding:0.7rem;border-radius:8px;width:100%;"></div><div style="margin-bottom:1rem;"><label>Select Price</label><div id="price-options-container" class="price-options"></div></div><button class="btn btn-success" onclick="addItemToOrder()">Add to Order</button></div><div id="orderSummaryContainer" class="card" style="display: none;"><h3>Step 3: Review Summary</h3><table class="summary-table"><thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead><tbody id="orderSummaryBody"></tbody></table></div></div><footer class="page-footer" id="order-footer"><div class="margin-display">Total Margin: <span id="totalMargin"></span></div><button id="confirm-order-btn" class="btn btn-primary" onclick="confirmOrder()">Confirm</button></footer></div></div>
     <div id="purchasePage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="purchaseVendorName"></h2></header><div class="page-content"><div class="card"><h3>Step 1: Find Item</h3><input type="text" id="purchaseItemSearch" class="search-bar" onkeyup="handlePurchaseItemSearch()" placeholder="Type to search..."><div id="purchaseItemSearchResults"></div></div><div id="purchase-entry-form" class="card" style="display: none;"><h3>Step 2: Add to Purchase</h3><p id="selectedPurchaseItemName" style="font-weight:bold; margin-bottom: 1rem;"></p><div style="display:flex;gap:1rem;margin-bottom:1rem;"><div style="flex-grow:1;"><label>Quantity</label><input type="number" id="purchaseQuantity" min="1" value="1" style="border:1px solid var(--border-color);padding:.7rem;border-radius:8px;width:100%;"></div><div style="flex-grow:1;"><label>Cost Rate</label><input type="number" id="purchaseCost" style="border:1px solid var(--border-color);padding:.7rem;border-radius:8px;width:100%;"></div></div><button class="btn btn-success" onclick="addItemToPurchase()">Add to Purchase</button></div><div id="purchaseSummaryContainer" class="card" style="display: none;"><h3>Step 3: Purchase Summary</h3><table class="summary-table"><thead><tr><th>Item</th><th>Qty</th><th>Cost</th><th>Total</th></tr></thead><tbody id="purchaseSummaryBody"></tbody></table></div></div><footer class="page-footer" id="purchase-footer"><div class="margin-display">Purchase Total: <span id="purchaseTotal" style="color:var(--danger-color)"></span></div><button id="confirm-purchase-btn" class="btn btn-primary" onclick="confirmPurchase()">Confirm Purchase</button></footer></div></div>
     <div id="paymentPage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="paymentPartyName"></h2></header><div class="page-content" style="padding:1rem;"><div class="card"><div class="balance-row"><span class="label-text" id="currentBalanceLabel">Current Balance</span><span class="amount-text" style="color:var(--danger-color);" id="currentBalanceText"></span></div><hr style="border:none; border-top:1px solid var(--border-color); margin: 1rem 0;"><label for="paymentAmountInput" class="label-text" id="paymentInputLabel">Enter Amount</label><input type="number" id="paymentAmountInput" placeholder="0.00" onkeyup="updateNewBalance()"><hr style="border:none; border-top:1px solid var(--border-color); margin: 1rem 0;"><div class="balance-row"><span class="label-text">New Balance</span><span class="amount-text" style="color:var(--success-color);" id="newBalanceText"></span></div></div></div><footer class="page-footer"><button class="btn btn-success" onclick="confirmPayment()">Confirm Payment</button></footer></div></div>
     
@@ -101,7 +101,7 @@
     <div id="stockEditModal" class="modal-overlay"><div class="modal-content"><h3 id="stockModalTitle">Edit Item</h3><div class="form-row"><label>Stock (Qty)</label><input type="number" id="stockModalClstock"></div><div class="form-row"><label>Cost Rate</label><input type="number" id="stockModalCostRate"></div><div class="form-row"><label>Price 1 (MRP)</label><input type="number" id="stockModalPrice1"></div><div class="form-row"><label>Price 2</label><input type="number" id="stockModalPrice2"></div><div class="form-row"><label>Price 3</label><input type="number" id="stockModalPrice3"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="confirmStockEdit()">Save Changes</button></div></div></div>
     <div id="addCustomerModal" class="modal-overlay"><div class="modal-content"><h3>Add New Customer</h3><div class="form-row"><label>Customer Name</label><input type="text" id="newCustomerName"></div><div class="form-row"><label>Contact</label><input type="number" id="newCustomerContact"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewCustomer()">Save Customer</button></div></div></div>
     <div id="addVendorModal" class="modal-overlay"><div class="modal-content"><h3>Add New Vendor</h3><div class="form-row"><label>Vendor Name</label><input type="text" id="newVendorName"></div><div class="form-row"><label>Contact</label><input type="number" id="newVendorContact"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewVendor()">Save Vendor</button></div></div></div>
-    <div id="addItemModal" class="modal-overlay"><div class="modal-content"><h3>Add New Item</h3><div class="form-row"><label>Item Name</label><input type="text" id="newItemName"></div><div class="form-row"><label>Cost Rate</label><input type="number" id="newItemCostRate"></div><div class="form-row"><label>MRP</label><input type="number" id="newItemMrp"></div><div class="form-row"><label>Initial Stock</label><input type="number" id="newItemClstock"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewItem()">Save Item</button></div></div></div>
+    <div id="addItemModal" class="modal-overlay"><div class="modal-content"><h3>Add New Item</h3><div class="form-row"><label>Item Name</label><input type="text" id="newItemName"></div><div class="form-row"><label>Cost Rate</label><input type="number" id="newItemCostRate"></div><div class="form-row"><label>MRP</label><input type="number" id="newItemMrp"></div><div class="form-row"><label>Price 1</label><input type="number" id="newItemPrice1"></div><div class="form-row"><label>Price 2</label><input type="number" id="newItemPrice2"></div><div class="form-row"><label>Price 3</label><input type="number" id="newItemPrice3"></div><div class="form-row"><label>Initial Stock</label><input type="number" id="newItemClstock"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewItem()">Save Item</button></div></div></div>
 
     <div id="successOverlay"><svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg><p id="successMessage"></p></div>
 
@@ -192,7 +192,30 @@
     const openAddModal = (type) => {closeAllModals();document.getElementById(`add${type.charAt(0).toUpperCase()+type.slice(1)}Modal`).classList.add("active")};
     const saveNewCustomer = () => {const name=document.getElementById("newCustomerName").value.trim(),contact=document.getElementById("newCustomerContact").value;if(!name)return alert("Customer name is required.");customers.push({CustomerCode:`C${Date.now()}`,Customer:name,Contact:contact,Outstanding:0});saveData();renderCustomers();closeAllModals()};
     const saveNewVendor = () => {const name=document.getElementById("newVendorName").value.trim(),contact=document.getElementById("newVendorContact").value;if(!name)return alert("Vendor name is required.");vendors.push({VendorCode:`V${Date.now()}`,VendorName:name,Contact:contact,AmountDue:0});saveData();renderVendors();closeAllModals()};
-    const saveNewItem = () => {const name=document.getElementById("newItemName").value.trim(),cost=parseFloat(document.getElementById("newItemCostRate").value)||0,mrp=parseFloat(document.getElementById("newItemMrp").value)||0,stock=parseInt(document.getElementById("newItemClstock").value)||0;if(!name)return alert("Item name is required.");items.push({ItemName:name,CostRate:cost,Mrp:mrp,Price1:mrp,Price2:mrp*.95,Price3:mrp*.9,Clstock:stock});saveData();renderInventory();closeAllModals()};
+    const saveNewItem = () => {
+        const name = document.getElementById("newItemName").value.trim();
+        const cost = parseFloat(document.getElementById("newItemCostRate").value) || 0;
+        const mrp = parseFloat(document.getElementById("newItemMrp").value) || 0;
+        const price1 = parseFloat(document.getElementById("newItemPrice1").value) || 0;
+        const price2 = parseFloat(document.getElementById("newItemPrice2").value) || 0;
+        const price3 = parseFloat(document.getElementById("newItemPrice3").value) || 0;
+        const stock = parseInt(document.getElementById("newItemClstock").value) || 0;
+        
+        if (!name) return alert("Item name is required.");
+        
+        items.push({
+            ItemName: name,
+            CostRate: cost,
+            Mrp: mrp,
+            Price1: price1,
+            Price2: price2,
+            Price3: price3,
+            Clstock: stock
+        });
+        saveData();
+        renderInventory();
+        closeAllModals();
+    };
 
     const downloadBill = (orderId) => {
         const order = salesOrders.find(o => o.orderId === parseInt(orderId));
@@ -204,7 +227,6 @@
         const customer = customers.find(c => c.CustomerCode === order.customerCode);
         const customerName = customer ? customer.Customer : 'N/A';
         const customerContact = customer ? customer.Contact : 'N/A';
-        const customerOutstanding = customer ? customer.Outstanding : 0;
 
         let itemsHtml = order.items.map(item => `
             <tr>
@@ -219,27 +241,28 @@
             <!DOCTYPE html>
             <html>
             <head>
-                <title>Invoice - PVR Business App</title>
+                <title>Invoice - PVR Distribution</title>
                 <style>
                     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 20px; color: #1D2A39; }
                     .invoice-container { max-width: 800px; margin: 0 auto; border: 1px solid #ccc; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1); background-color: #fff; }
                     .header { text-align: center; margin-bottom: 30px; }
-                    .header h1 { color: #0A84FF; margin: 0; font-size: 2.2rem; }
+                    .header h1 { color: #0A84FF; margin: 0; font-size: 1.8rem; } /* Smaller header size */
                     .header p { font-size: 0.9rem; color: #6C757D; }
                     .details { display: flex; justify-content: space-between; margin-bottom: 20px; }
                     .details div { width: 48%; }
+                    .details .customer-details { text-align: left; }
+                    .details .invoice-details { text-align: right; } /* Align invoice details to the right */
                     .details strong { display: block; margin-bottom: 5px; color: #0A84FF; }
                     .details p { margin: 0; font-size: 0.95rem; }
                     .items-table { width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; }
                     .items-table th, .items-table td { border: 1px solid #eee; padding: 10px; text-align: left; }
-                    .items-table th { background-color: #E0F2F7; color: #1D2A39; font-weight: 600; text-align: left; } /* Light blue header */
+                    .items-table th { background-color: #E6E6FA; color: #1D2A39; font-weight: 600; text-align: left; } /* Lavender header */
                     .items-table th:nth-child(3), .items-table td:nth-child(3),
                     .items-table th:nth-child(4), .items-table td:nth-child(4) { text-align: right; }
                     .total-section { text-align: right; margin-top: 20px; }
                     .total-section div { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 1.1rem; }
                     .total-section .label { font-weight: 600; color: #1D2A39; }
                     .total-section .amount { font-weight: 700; color: #FF3B30; }
-                    .total-section .outstanding { color: #34C759; }
 
                     @media print {
                         body { background-color: #fff; }
@@ -249,7 +272,7 @@
                             color: #000 !important;
                         }
                         .items-table th {
-                            background-color: #e0f2f7 !important; /* Ensure light blue is maintained */
+                            background-color: #E6E6FA !important; /* Ensure lavender is maintained */
                             -webkit-print-color-adjust: exact; /* For better color printing */
                             color-adjust: exact;
                         }
@@ -259,17 +282,17 @@
             <body>
                 <div class="invoice-container">
                     <div class="header">
-                        <h1>PVR Business App</h1>
+                        <h1>PVR DISTRIBUTION</h1>
                         <p>Sales Invoice</p>
                     </div>
 
                     <div class="details">
-                        <div>
+                        <div class="customer-details">
                             <strong>Customer Details:</strong>
                             <p>${customerName}</p>
                             <p>Contact: ${customerContact}</p>
                         </div>
-                        <div>
+                        <div class="invoice-details">
                             <strong>Invoice Details:</strong>
                             <p>Order ID: ${order.orderId}</p>
                             <p>Date: ${order.date}</p>
@@ -294,10 +317,6 @@
                         <div>
                             <span class="label">Total Amount:</span>
                             <span class="amount">${formatCurrency(order.totalAmount)}</span>
-                        </div>
-                        <div>
-                            <span class="label">Customer's Outstanding Balance:</span>
-                            <span class="amount outstanding">${formatCurrency(customerOutstanding)}</span>
                         </div>
                     </div>
                 </div>
