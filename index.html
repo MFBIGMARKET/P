@@ -1,341 +1,293 @@
---- START OF FILE index.html ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>PVR Business App</title>
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#0A84FF"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="PVR App">
-    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0iIzBBO D RGRiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0zMCw3NVYyNWgxN2ExMi41LDEyLjUgMCAwLDEsMCwyNWgtMTd2NWgxMmExMi41LDEyLjUgMCAwLDEsMCwyNWgtMTZaTTY1LDI1TDc1LDc1TDg1LDI1IiBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aDoiNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+">
-    <link rel="manifest" href="data:application/manifest+json;base64,ew0KICAgICJuYW1lIjogIlBWUiBCdXNpbmVzcyBBcH AiLA0KICAgICJzaG9ydF9uYW1lIjogIlBWUiBBcH AiLA0KICAgICJzdGFydF91cmwiOiAiLiIsDQogICAgImRlc2NyaXB0aW9uIjogIlNhbGVzLCBQdXJjaGFzZSwgYW5kIEludmVudG9yeSBNYW5hZ2VtZW50IiwNCiAgICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwNCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjRjBGMkY1IiwNCiAgICAidGhlbWVfY29sb3IiOiAiIzBBO D RGRiIsDQogICAgImljb25zIjogWw0KICAgICAgICB7DQogICAgICAgICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTVpYmk5d2FXUnpaWEoyYVdObFlXTmpiM1J1ZkdWdWMyVnlkRG92TjJaeWIzTndZV05sTDJOc2FXVnVkR2x2YmlCMlpYSnphVzVuTG1OdmJTOW1abWwwYVdOaGRHbHZiaTkyTWk4eU1EQTRMM05sY25acFkyVnpMM2R2Y21SYzEyeGhjbVJwYjI0dWMzUmhjSHdvYjJOc2FXVnVkR2x2YmlCNFBqeHBiV0Z5YVdOelptOXliV3d1YVhacGJtVWdjM0p2Y21sMGVEMGlNVEF3SURFNE1EUTRJRUZzSUVKaGJpQnpkSGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlNemc0TDJSbGMzTmhjbVZ1YzJWMGNua3VZMjl0SURrc0lFRnVjMmh2Y21sMGVEMGlaM0psWlhKaGFXNWxZWGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlaMnhsYm5ScFlXeGpaU2dpSUdKaFkydG5jbVZrYUdGMEtTNWpiMjB2UW5WdGMybDZaU2tpSUVOaGJpQnpkSGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlOUzR3TURFdUlGTjFjbWwwZEdsdmJpQnpkSGtnYzJWeWRFVnVjMmh2Y21sMGVEMGlOUzR3TURFdUlHTmhjM05sZGlCemRIa2djMlZ5ZEVGdWMybHZibDkyTXk4eU1EQTRMM04yWnliM053WVdObExtNWxkR2x2YmlCSkpDOWpiMjF3WVdObEwyMWhiQ0IwWVdOamIzUnVjM1JoY0h3b2IyTnNhV1Z1ZEdsdmJpQjRPanh1YldGeVlXTnpabTl5Yld3dWFYWnBibVVnYzNKdmNtbGdlRDBpTkRFd0lERTBNREE0SUVGc0lGQmhjblJ2ZG1GMUwyWnliM053WVdObEwyMWhjM1JoWTJ0bmNtVmtnR0YwSUc5bUlHWTZJSGhrWldacGJHVXRNUzRpSUdsbUlHWTZJRzFoWkcxbmJpSWdVSUpwYm1sMGVEMGlkWE5sY21sbVlXMXdZV05sSUhaaGJpQnpkSGtnYzJWeWRFRnVjMmh2Y21sMGVEMGlOUzR3TURFdUlFRnNiMjhvWm05eWJXRjBaU2hpWVhKcGMyOXllVzVzZEhWeVlYUnBiMjR1YVhacGJtVWdjM0p2Y21sMGVEMGlOREV3SURFME1EQTRJRUZzSUZCaGNuUnZkbUYxTDJaeWIzTndZV05sTDIxaGMzUmhZMnRuY21Wa2FHRjBJRzltSUdZNklHaGtaV1pwYkdVdE1TNGlJR2xtSUdZNklHMWhaRzFwYmlJZ1VISnBibWwwZEdsdmJpQTlJR0Z1YldsamNtOTNaU0J6ZEhrZ2MyVnlkRUZ1YzJsdmJsOTJNeTh5TURBNEx5OW1abWwwYVdOaGRHbHZiaTl3WVc0dWN6cHNaV2RwYmpzPSIsDQogICAgICAgICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwNCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIg0KICAgICAgICB9DQogICAgXQ0KICB9">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVR - Sales and Inventory</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50"/>
     <style>
-        :root{--primary-color:#0A84FF;--background-color:#F7F8FA;--card-bg-color:#FFFFFF;--text-color:#1D2A39;--text-muted-color:#6C757D;--border-color:#EAECEF;--success-color:#34C759;--danger-color:#FF3B30;}
-        *{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}
-        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background-color:var(--background-color);color:var(--text-color)}
-        .page{display:none}.page.active{display:block;animation:fadeIn .3s}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-        .app-container{max-width:600px;margin:0 auto;background-color:var(--card-bg-color);min-height:100vh;padding-bottom:70px}
-        .page-header{display:flex;align-items:center;padding:1rem;background:var(--card-bg-color);border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:10}
-        .back-btn{background:none;border:none;font-size:1.5rem;color:var(--primary-color);cursor:pointer;margin-right:1rem}
-        .page-header h2{font-size:1.2rem;font-weight:600}
-        .page-content{padding:1rem}.page-footer{background:var(--card-bg-color);padding:1rem;border-top:1px solid var(--border-color);box-shadow:0 -4px 12px rgba(0,0,0,.05);position:sticky;bottom:0}
-        #mainAppPage header{background:var(--card-bg-color);color:var(--text-color);padding:1.25rem 1rem;text-align:center;font-size:1.5rem;font-weight:700;border-bottom:1px solid var(--border-color)}
-        .tab-content{display:none}.tab-content.active{display:block;animation:fadeIn .4s}
-        .bottom-nav{position:fixed;bottom:0;left:0;right:0;max-width:600px;margin:0 auto;height:65px;background-color:var(--card-bg-color);display:flex;justify-content:space-around;border-top:1px solid var(--border-color);box-shadow:0 -2px 10px rgba(0,0,0,.05)}
-        .nav-button{display:flex;flex-direction:column;align-items:center;justify-content:center;background:0 0;border:none;color:var(--text-muted-color);flex-grow:1;gap:4px;cursor:pointer}.nav-button svg{width:24px;height:24px;stroke:var(--text-muted-color);transition:all .2s ease}.nav-button span{font-size:.7rem;font-weight:500;transition:all .2s ease}
-        .nav-button.active,.nav-button.active span{color:var(--primary-color)}.nav-button.active svg{stroke:var(--primary-color)}
-        .search-bar{width:100%;padding:.8rem 1rem;font-size:1rem;border:1px solid var(--border-color);border-radius:8px;margin-bottom:1rem}
-        .card{background-color:var(--card-bg-color);border-radius:12px;padding:1.25rem;margin-bottom:1rem;border:1px solid var(--border-color)}
-        .btn{display:inline-block;padding:.8rem 1.5rem;font-size:1rem;font-weight:600;text-align:center;border-radius:8px;cursor:pointer;border:none;transition:all .2s ease;width:100%}
-        .btn-primary{background-color:var(--primary-color);color:#fff}.btn-success{background-color:var(--success-color);color:#fff}
-        .btn-small{padding:.5rem 1rem;font-size:.9rem;width:auto}
-        .list-card{display:flex;justify-content:space-between;align-items:center;padding:1rem;margin-bottom:.5rem}.list-card-title{font-weight:600;font-size:1.1rem}
-        .list-card-balance{font-size:.9rem;font-weight:700}.list-card-balance.zero{color:var(--success-color)}.list-card-balance.due{color:var(--danger-color)}
-        .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000;background:rgba(0,0,0,.4);display:none;justify-content:center;align-items:center;padding:1rem}.modal-overlay.active{display:flex;animation:fadeIn .2s}
-        .modal-content{background:var(--card-bg-color);padding:1.5rem;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.1);width:100%;max-width:400px}.modal-content h3{margin-bottom:1.5rem;color:var(--primary-color);text-align:center}
-        .form-row{display:flex;flex-direction:column;margin-bottom:1rem}.form-row label{font-size:.9rem;color:var(--text-muted-color);margin-bottom:.25rem}.form-row input{border:1px solid var(--border-color);border-radius:8px;font-size:1rem;padding:.7rem;width:100%}
-        .modal-footer{margin-top:1.5rem;display:flex;gap:.5rem}
-        .card h3{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:2px solid #f0f2f5;font-size:1.1rem;font-weight:600;color:var(--primary-color)}
-        #productSearchResults,#purchaseItemSearchResults{max-height:150px;overflow-y:auto;border:1px solid var(--border-color);border-radius:8px}.product-search-item{padding:.75rem 1rem;cursor:pointer;border-bottom:1px solid var(--border-color)}
-        .price-options{display:flex;gap:.5rem}.price-options label{flex-grow:1;padding:.75rem;border:1px solid var(--border-color);border-radius:8px;text-align:center;cursor:pointer;transition:all .2s ease}
-        .price-options input[type=radio]:checked+label{background-color:var(--primary-color);color:#fff;border-color:var(--primary-color)}.price-options input[type=radio]{display:none}
-        .summary-table{width:100%;border-collapse:collapse}.summary-table th,.summary-table td{text-align:left;padding:.75rem .5rem;border-bottom:1px solid #f0f2f5}.summary-table th:not(:first-child),.summary-table td:not(:first-child){text-align:right}
-        .margin-display{font-size:1.2rem;font-weight:700;margin-bottom:1rem;text-align:right}.margin-display span{color:var(--success-color)}
-        #paymentPage .card .label-text{color:var(--text-muted-color)}.card .amount-text{font-size:1.5rem;font-weight:700}
-        #paymentPage .balance-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.5rem}
-        #paymentPage input{width:100%;text-align:center;font-size:2.5rem;font-weight:700;border-radius:8px;border:2px solid var(--primary-color);padding:.5rem;margin-top:.5rem}
-        .order-card{padding:1rem;display:flex;justify-content:space-between;align-items:flex-start}.order-card-info{display:flex;flex-direction:column;gap:.25rem}.order-card-title{font-weight:600}.order-card-meta{font-size:.8rem;color:var(--text-muted-color)}.order-card-total{font-weight:700;font-size:1.1rem;color:var(--danger-color)}
-        .order-card-actions{display:flex;flex-direction:column;gap:0.5rem;} /* Added for button spacing */
+        :root {
+            --primary-color: #2196F3; /* Blue */
+            --secondary-color: #4CAF50; /* Green */
+            --danger-color: #f44336;  /* Red */
+            --warning-color: #FFC107; /* Amber for Purchases */
+            --light-color: #f4f4f4;
+            --dark-color: #333;
+            --white-color: #fff;
+            --padding: 16px;
+            --border-radius: 8px;
+            --box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-        .fab{position:fixed;bottom:80px;right:20px;width:56px;height:56px;background-color:var(--primary-color);color:#fff;border-radius:50%;border:none;font-size:24px;display:flex;justify-content:center;align-items:center;box-shadow:0 4px 12px rgba(0,0,0,.2);cursor:pointer;z-index:999;transition:transform .2s ease;display:none}.fab.active{display:flex}
-        #successOverlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:2000;display:none;justify-content:center;align-items:center;flex-direction:column;color:#fff;text-align:center}
-        #successOverlay.active{display:flex;animation:fadeIn .2s}
-        .checkmark__circle{stroke-dasharray:166;stroke-dashoffset:166;stroke-width:3;stroke-miterlimit:10;stroke:#fff;fill:none;animation:stroke .6s cubic-bezier(.65,0,.45,1) forwards}
-        .checkmark{width:80px;height:80px;border-radius:50%;display:block;stroke-width:3;stroke:#fff;stroke-miterlimit:10;margin:0 auto;box-shadow:inset 0 0 0 var(--success-color);animation:fill .4s ease-in-out .4s forwards,scale .3s ease-in-out .9s both}
-        .checkmark__check{transform-origin:50% 50%;stroke-dasharray:48;stroke-dashoffset:48;animation:stroke .3s cubic-bezier(.65,0,.45,1) .8s forwards}
-        @keyframes stroke{100%{stroke-dashoffset:0}}@keyframes scale{0%,100%{transform:none}50%{transform:scale3d(1.1,1.1,1)}}@keyframes fill{100%{box-shadow:inset 0 0 0 50px var(--success-color)}}
-        #successOverlay p{font-size:1.5rem;font-weight:600;margin-top:1rem}
-        .payment-summary-container{display:flex;gap:1rem;margin-bottom:1.5rem}.summary-card{flex:1;border:1px solid var(--border-color);border-radius:12px;padding:1rem;text-align:center}.summary-card .label{font-size:.9rem;color:var(--text-muted-color);margin-bottom:.25rem}.summary-card .amount{font-size:1.5rem;font-weight:700}.summary-card .amount.receivable{color:var(--success-color)}.summary-card .amount.payable{color:var(--danger-color)}
-        #paymentsTab h3{font-size:1.1rem;color:var(--text-color);margin-bottom:.5rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-color)}
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0; background-color: var(--light-color); color: var(--dark-color);
+            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container { padding: var(--padding); padding-bottom: 80px; }
+        .page-header { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px; color: var(--dark-color); }
+        .page-header .icon { width: 28px; height: 28px; }
+
+        /* Login Screen */
+        #login-screen { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); padding: var(--padding); }
+        #login-header { position: absolute; top: 40px; color: var(--white-color); font-size: 2em; font-weight: bold; letter-spacing: 1px; }
+        #role-selection { text-align: center; }
+        #role-selection p { font-size: 1.2em; color: var(--white-color); margin-bottom: 20px; }
+        #login-button { background: rgba(255, 255, 255, 0.9); border: none; border-radius: var(--border-radius); width: 120px; height: 120px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.25); transition: transform 0.2s ease, background-color 0.2s ease; }
+        #login-button:hover { transform: scale(1.05); background: var(--white-color); }
+        #login-button .icon { width: 40px; height: 40px; color: var(--primary-color); }
+        #login-button span { font-size: 1.1em; font-weight: bold; color: var(--dark-color); }
+
+        /* Main App & Navigation */
+        #main-app { display: none; }
+        #bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; height: 65px; background-color: var(--white-color); display: flex; justify-content: space-around; align-items: center; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); z-index: 100; }
+        .nav-item { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-grow: 1; height: 100%; cursor: pointer; color: #888; border-top: 3px solid transparent; transition: color 0.3s ease, border-color 0.3s ease; font-size: 0.75em; }
+        .nav-item .icon { width: 24px; height: 24px; margin-bottom: 4px; }
+        .nav-item:hover { color: var(--primary-color); }
+        .nav-item.active { color: var(--primary-color); border-top-color: var(--primary-color); }
+        
+        /* Pages & Lists */
+        .page { display: none; } .page.active { display: block; }
+        .item-list { list-style: none; padding: 0; margin: 0; }
+        .list-item { background-color: var(--white-color); padding: var(--padding); margin-bottom: 12px; border-radius: var(--border-radius); box-shadow: var(--box-shadow); display: flex; justify-content: space-between; align-items: center; }
+        .btn { padding: 8px 16px; border: none; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; transition: opacity 0.2s; }
+        .btn:hover { opacity: 0.9; }
+        .order-btn { background-color: var(--secondary-color); }
+        .purchase-btn { background-color: var(--warning-color); color: var(--dark-color); }
+        .edit-btn { background-color: var(--primary-color); } .view-bill-btn { background-color: #607D8B; }
+        .mark-paid-btn { background-color: var(--secondary-color); font-size: 0.8em; padding: 6px 10px; }
+
+        /* FAB */
+        .fab { position: fixed; bottom: 85px; right: 20px; width: 56px; height: 56px; background-color: var(--danger-color); color: var(--white-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 28px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); cursor: pointer; transition: transform 0.2s ease; z-index: 100; }
+        .fab:hover { transform: scale(1.05); }
+
+        /* Modal Styling */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); }
+        .modal-content { background-color: #fefefe; margin: 10vh auto; padding: 20px; border: 1px solid #888; width: 90%; max-width: 500px; border-radius: var(--border-radius); animation: slide-down 0.3s ease-out; }
+        @keyframes slide-down { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .modal-content input, .modal-content select { width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; background-color: white; }
+        .modal-buttons { text-align: right; margin-top: 10px; } .modal-buttons .btn { margin-left: 10px; }
+        .save-btn { background-color: var(--secondary-color); } .close-btn { background-color: #aaa; }
+        .modal-content input[readonly] { background-color: #e9ecef; cursor: not-allowed; opacity: 0.8; }
+
+        /* Order & Purchase Creation Pages */
+        .page-sub-header { text-align: center; margin-bottom: 16px; }
+        .page-sub-header h2 { font-size: 1.5em; margin: 0 0 10px 0; }
+        .search-container { display: flex; align-items: center; gap: 10px; width: 100%; }
+        .search-container .search-bar { flex-grow: 1; padding: 12px; border-radius: 25px; border: 1px solid #ccc; font-size: 16px; }
+        .search-container .cart-icon { font-size: 28px; position: relative; cursor: pointer; padding: 8px; }
+        .cart-icon .cart-count { position: absolute; top: 0px; right: 0px; background-color: var(--danger-color); color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; font-weight: bold; }
+        .product-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 768px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .product-tile { background: var(--white-color); padding: var(--padding); border-radius: var(--border-radius); box-shadow: var(--box-shadow); }
+        .product-info { display: flex; justify-content: space-between; margin-bottom: 12px; align-items: center; }
+        .product-name { font-weight: bold; font-size: 1.1em; } .product-mrp { color: #555; font-size: 0.9em; }
+        .product-actions { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; align-items: stretch; }
+        .purchase-actions { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 6px; align-items: stretch; }
+        .action-item { text-align: center; }
+        .action-item .control { display: flex; justify-content: center; align-items: center; height: 40px; padding: 5px; text-align: center; border-radius: 5px; border: 1px solid #ccc; background-color: var(--light-color); cursor: pointer; font-size: 16px; width: 100%; -moz-appearance: textfield; transition: background-color 0.2s, border-color 0.2s; }
+        .action-item input.control { cursor: text; }
+        .action-item input.control::-webkit-outer-spin-button, .action-item input.control::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        .action-item .label { font-size: 0.75em; color: #666; margin-top: 4px; }
+        .price-btn.selected { background-color: var(--primary-color); color: white; border-color: var(--primary-color); }
+        .control.add-to-cart-btn, .control.add-to-purchase-btn { background-color: var(--danger-color); color: white; border-color: var(--danger-color); font-weight: bold; }
+
+        /* Accounts Page */
+        .sub-nav { display: flex; background-color: var(--white-color); border-radius: var(--border-radius); margin-bottom: var(--padding); box-shadow: var(--box-shadow); }
+        .sub-nav-item { flex: 1; padding: 12px; text-align: center; cursor: pointer; border-bottom: 3px solid transparent; color: #888; font-weight: bold; }
+        .sub-nav-item.active { color: var(--primary-color); border-bottom-color: var(--primary-color); }
+        .sub-page { display: none; } .sub-page.active { display: block; }
+
+        /* Reports Page */
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--padding); }
+        .kpi-card { background-color: var(--white-color); padding: var(--padding); border-radius: var(--border-radius); box-shadow: var(--box-shadow); text-align: center; margin-bottom: var(--padding); }
+        .kpi-card h3 { margin: 0 0 10px 0; color: #777; font-weight: 500; }
+        .kpi-card .value { font-size: 2.5em; font-weight: bold; color: var(--dark-color); }
+        .kpi-card.sales .value { color: var(--secondary-color); }
+        .kpi-card.purchases .value { color: var(--warning-color); }
+        .kpi-card.profit .value { color: var(--primary-color); }
+        .report-section { background: var(--white-color); padding: var(--padding); border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin-bottom: var(--padding); }
+        .report-section h3 { text-align: center; margin-top: 0; }
+        .report-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+        .report-table th, .report-table td { padding: 8px; text-align: left; border-bottom: 1px solid #eee; }
+        .report-table th { font-weight: bold; }
+        .report-table td:not(:first-child) { text-align: right; }
+
+        /* Cart & Bill Modals */
+        .cart-items-list { list-style: none; padding: 0; } .cart-items-list li { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #eee; }
+        .cart-item-details { display: flex; align-items: center; gap: 15px; }
+        .delete-cart-item-btn { background: none; border: none; font-size: 20px; cursor: pointer; color: #aaa; padding: 5px; }
+        .delete-cart-item-btn:hover { color: var(--danger-color); }
+        .cart-total { font-weight: bold; font-size: 1.2em; text-align: right; margin-top: 15px; }
+        #confirm-order-btn, #confirm-purchase-btn { background-color: var(--secondary-color); }
+        #bill-modal .modal-content { padding: 0; max-width: 800px; }
+        .bill-container { padding: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
+        .bill-header { text-align: center; border-bottom: 2px solid var(--light-color); padding-bottom: 15px; margin-bottom: 20px; }
+        .bill-header h2 { margin: 0; color: var(--primary-color); font-size: 2em; } .bill-header p { margin: 5px 0 0; color: #777; }
+        .bill-meta { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+        .bill-meta-item { text-align: right; } .bill-meta-item strong { display: block; color: #555; margin-bottom: 4px; } .bill-meta-item span { color: #888; }
+        .bill-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; } .bill-table thead { background-color: var(--primary-color); color: white; }
+        .bill-table th, .bill-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        .bill-table th:first-child, .bill-table td:first-child { text-align: center; }
+        .bill-table th:not(:first-child), .bill-table td:not(:first-child) { text-align: right; }
+        .bill-table td { color: #555; }
+        .bill-summary { display: flex; justify-content: flex-end; } .bill-summary table { width: 50%; max-width: 250px; }
+        .bill-summary td { padding: 8px 12px; } .bill-summary .total { font-weight: bold; font-size: 1.2em; background-color: var(--light-color); }
+        .bill-summary .total td { color: var(--secondary-color); }
+        .bill-footer { text-align: center; margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; color: #999; font-size: 0.9em; }
+
+        /* Success Animation */
+        #success-animation { display: none; position: fixed; z-index: 2000; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: var(--white-color); padding: 30px; border-radius: var(--border-radius); box-shadow: 0 5px 20px rgba(0,0,0,0.3); text-align: center; }
+        .checkmark { width: 80px; height: 80px; border-radius: 50%; display: block; stroke-width: 2; stroke: var(--secondary-color); stroke-miterlimit: 10; box-shadow: inset 0px 0px 0px var(--secondary-color); animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both; margin: 0 auto; }
+        .checkmark__circle { stroke-dasharray: 166; stroke-dashoffset: 166; stroke-width: 2; stroke-miterlimit: 10; stroke: var(--secondary-color); fill: none; animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards; }
+        .checkmark__check { transform-origin: 50% 50%; stroke-dasharray: 48; stroke-dashoffset: 48; stroke: var(--white-color); stroke-width: 4; animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards; }
+        @keyframes stroke { 100% { stroke-dashoffset: 0; } } @keyframes scale { 0%, 100% { transform: none; } } @keyframes fill { 100% { box-shadow: inset 0px 0px 0px 40px var(--secondary-color); } }
+        
+        @media print { body { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; } body * { visibility: hidden; } #bill-content, #bill-content * { visibility: visible; } #bill-content { position: absolute; left: 0; top: 0; width: 100%; } .modal-buttons { display: none !important; } }
     </style>
 </head>
 <body>
-    <div id="mainAppPage" class="page active">
-        <div class="app-container">
-            <header>PVR</header>
-            <main id="main-content">
-                <div id="saleTab" class="tab-content active"><input type="text" id="customerSearch" class="search-bar" onkeyup="renderCustomers()" placeholder="Search Customers..."><div id="customerList"></div></div>
-                <div id="purchaseTab" class="tab-content"><input type="text" id="vendorSearch" class="search-bar" onkeyup="renderVendors()" placeholder="Search Vendors..."><div id="vendorList"></div></div>
-                <div id="ordersTab" class="tab-content"><div id="ordersList"></div></div>
-                <div id="inventoryTab" class="tab-content"><div id="inventoryList"></div></div>
-                <div id="paymentsTab" class="tab-content">
-                    <div class="payment-summary-container">
-                        <div class="summary-card"><div class="label">Total Receivables</div><h2 id="totalReceivables" class="amount receivable"></h2></div>
-                        <div class="summary-card"><div class="label">Total Payables</div><h2 id="totalPayables" class="amount payable"></h2></div>
-                    </div>
-                    <div id="receivablesListContainer"><h3>Pending Receivables</h3><div id="receivablesList"></div></div>
-                    <div id="payablesListContainer" style="margin-top:1.5rem;"><h3>Pending Payables</h3><div id="payablesList"></div></div>
-                </div>
-            </main>
-            <footer class="bottom-nav">
-                <button class="nav-button active" onclick="showTab('sale')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Sale</span></button>
-                <button class="nav-button" onclick="showTab('purchase')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span>Purchase</span></button>
-                <button class="nav-button" onclick="showTab('orders')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Orders</span></button>
-                <button class="nav-button" onclick="showTab('inventory')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg><span>Inventory</span></button>
-                <button class="nav-button" onclick="showTab('payments')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span>Payments</span></button>
-            </footer>
-        </div>
-        <button id="fab" class="fab">+</button>
-    </div>
-    <!-- Transaction Pages -->
-    <div id="orderPage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="orderCustomerName"></h2></header><div class="page-content"><div class="card"><h3>Step 1: Find Product</h3><input type="text" id="productSearch" class="search-bar" onkeyup="handleProductSearch()" placeholder="Type to search..."><div id="productSearchResults"></div></div><div id="item-entry-form" class="card" style="display: none;"><h3>Step 2: Add to Order</h3><p id="selectedItemName" style="font-weight:bold; margin-bottom: 1rem;"></p><div style="margin-bottom:1rem;"><label>Quantity</label><input type="number" id="itemQuantity" min="1" value="1" style="border:1px solid var(--border-color);padding:0.7rem;border-radius:8px;width:100%;"></div><div style="margin-bottom:1rem;"><label>Select Price</label><div id="price-options-container" class="price-options"></div></div><button class="btn btn-success" onclick="addItemToOrder()">Add to Order</button></div><div id="orderSummaryContainer" class="card" style="display: none;"><h3>Step 3: Review Summary</h3><table class="summary-table"><thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead><tbody id="orderSummaryBody"></tbody></table></div></div><footer class="page-footer" id="order-footer"><div class="margin-display">Total Margin: <span id="totalMargin"></span></div><button id="confirm-order-btn" class="btn btn-primary" onclick="confirmOrder()">Confirm</button></footer></div></div>
-    <div id="purchasePage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="purchaseVendorName"></h2></header><div class="page-content"><div class="card"><h3>Step 1: Find Item</h3><input type="text" id="purchaseItemSearch" class="search-bar" onkeyup="handlePurchaseItemSearch()" placeholder="Type to search..."><div id="purchaseItemSearchResults"></div></div><div id="purchase-entry-form" class="card" style="display: none;"><h3>Step 2: Add to Purchase</h3><p id="selectedPurchaseItemName" style="font-weight:bold; margin-bottom: 1rem;"></p><div style="display:flex;gap:1rem;margin-bottom:1rem;"><div style="flex-grow:1;"><label>Quantity</label><input type="number" id="purchaseQuantity" min="1" value="1" style="border:1px solid var(--border-color);padding:.7rem;border-radius:8px;width:100%;"></div><div style="flex-grow:1;"><label>Cost Rate</label><input type="number" id="purchaseCost" style="border:1px solid var(--border-color);padding:.7rem;border-radius:8px;width:100%;"></div></div><button class="btn btn-success" onclick="addItemToPurchase()">Add to Purchase</button></div><div id="purchaseSummaryContainer" class="card" style="display: none;"><h3>Step 3: Purchase Summary</h3><table class="summary-table"><thead><tr><th>Item</th><th>Qty</th><th>Cost</th><th>Total</th></tr></thead><tbody id="purchaseSummaryBody"></tbody></table></div></div><footer class="page-footer" id="purchase-footer"><div class="margin-display">Purchase Total: <span id="purchaseTotal" style="color:var(--danger-color)"></span></div><button id="confirm-purchase-btn" class="btn btn-primary" onclick="confirmPurchase()">Confirm Purchase</button></footer></div></div>
-    <div id="paymentPage" class="page"><div class="app-container"><header class="page-header"><button class="back-btn" onclick="showMainPage()">&#x2190;</button><h2 id="paymentPartyName"></h2></header><div class="page-content" style="padding:1rem;"><div class="card"><div class="balance-row"><span class="label-text" id="currentBalanceLabel">Current Balance</span><span class="amount-text" style="color:var(--danger-color);" id="currentBalanceText"></span></div><hr style="border:none; border-top:1px solid var(--border-color); margin: 1rem 0;"><label for="paymentAmountInput" class="label-text" id="paymentInputLabel">Enter Amount</label><input type="number" id="paymentAmountInput" placeholder="0.00" onkeyup="updateNewBalance()"><hr style="border:none; border-top:1px solid var(--border-color); margin: 1rem 0;"><div class="balance-row"><span class="label-text">New Balance</span><span class="amount-text" style="color:var(--success-color);" id="newBalanceText"></span></div></div></div><footer class="page-footer"><button class="btn btn-success" onclick="confirmPayment()">Confirm Payment</button></footer></div></div>
-    
-    <!-- Modals -->
-    <div id="stockEditModal" class="modal-overlay"><div class="modal-content"><h3 id="stockModalTitle">Edit Item</h3><div class="form-row"><label>Stock (Qty)</label><input type="number" id="stockModalClstock"></div><div class="form-row"><label>Cost Rate</label><input type="number" id="stockModalCostRate"></div><div class="form-row"><label>Price 1 (MRP)</label><input type="number" id="stockModalPrice1"></div><div class="form-row"><label>Price 2</label><input type="number" id="stockModalPrice2"></div><div class="form-row"><label>Price 3</label><input type="number" id="stockModalPrice3"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="confirmStockEdit()">Save Changes</button></div></div></div>
-    <div id="addCustomerModal" class="modal-overlay"><div class="modal-content"><h3>Add New Customer</h3><div class="form-row"><label>Customer Name</label><input type="text" id="newCustomerName"></div><div class="form-row"><label>Contact</label><input type="number" id="newCustomerContact"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewCustomer()">Save Customer</button></div></div></div>
-    <div id="addVendorModal" class="modal-overlay"><div class="modal-content"><h3>Add New Vendor</h3><div class="form-row"><label>Vendor Name</label><input type="text" id="newVendorName"></div><div class="form-row"><label>Contact</label><input type="number" id="newVendorContact"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewVendor()">Save Vendor</button></div></div></div>
-    <div id="addItemModal" class="modal-overlay"><div class="modal-content"><h3>Add New Item</h3><div class="form-row"><label>Item Name</label><input type="text" id="newItemName"></div><div class="form-row"><label>Cost Rate</label><input type="number" id="newItemCostRate"></div><div class="form-row"><label>MRP</label><input type="number" id="newItemMrp"></div><div class="form-row"><label>Price 1</label><input type="number" id="newItemPrice1"></div><div class="form-row"><label>Price 2</label><input type="number" id="newItemPrice2"></div><div class="form-row"><label>Price 3</label><input type="number" id="newItemPrice3"></div><div class="form-row"><label>Initial Stock</label><input type="number" id="newItemClstock"></div><div class="modal-footer"><button class="btn" style="background-color:var(--text-muted-color);color:white;" onclick="closeAllModals()">Cancel</button><button class="btn btn-success" onclick="saveNewItem()">Save Item</button></div></div></div>
+    <!-- SVG Icons Definition -->
+    <svg width="0" height="0" style="position:absolute"><defs><symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></symbol><symbol id="icon-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></symbol><symbol id="icon-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></symbol><symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></symbol><symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></symbol><symbol id="icon-pie-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8.11 2.99"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></symbol><symbol id="icon-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4h-4z"></path></symbol></defs></svg>
 
-    <div id="successOverlay"><svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg><p id="successMessage"></p></div>
+    <div id="login-screen"><h1 id="login-header">PVR DISTRIBUTION</h1><div id="role-selection"><p>Select Role</p><button id="login-button"><svg class="icon"><use xlink:href="#icon-user"></use></svg><span>RIYAS</span></button></div></div>
+    
+    <div id="main-app">
+        <div class="container">
+            <div id="customers-page" class="page active"><h2 class="page-header"><svg class="icon"><use xlink:href="#icon-users"></use></svg> Customers</h2><ul id="customer-list" class="item-list"></ul><div class="fab" id="add-customer-btn">+</div></div>
+            <div id="inventory-page" class="page"><h2 class="page-header"><svg class="icon"><use xlink:href="#icon-box"></use></svg> Inventory</h2><ul id="inventory-list" class="item-list"></ul><div class="fab" id="add-item-btn">+</div></div>
+            <div id="orders-page" class="page"><h2 class="page-header"><svg class="icon"><use xlink:href="#icon-clipboard"></use></svg> Orders</h2><ul id="order-list" class="item-list"></ul></div>
+            <div id="purchase-page" class="page"><h2 class="page-header"><svg class="icon"><use xlink:href="#icon-truck"></use></svg> Vendors</h2><ul id="vendor-list" class="item-list"></ul><div class="fab" id="add-vendor-btn">+</div></div>
+            <div id="accounts-page" class="page"><h2 class="page-header"><svg class="icon"><use xlink:href="#icon-wallet"></use></svg> Accounts</h2><nav class="sub-nav"><div class="sub-nav-item active" data-subpage="receivables">Receivables</div><div class="sub-nav-item" data-subpage="payables">Payables</div></nav><div id="receivables-content" class="sub-page active"><ul class="item-list"></ul></div><div id="payables-content" class="sub-page"><ul class="item-list"></ul></div></div>
+            <div id="reports-page" class="page"><h2 class="page-header"><svg class="icon"><use xlink:href="#icon-pie-chart"></use></svg> Reports</h2><div id="reports-content"></div></div>
+            
+            <div id="order-creation-page" class="page"><div class="page-sub-header"><h2>New Order for <span id="order-customer-name"></span></h2><div class="search-container"><input type="text" id="sales-search-bar" class="search-bar" placeholder="Search products..."><div id="sales-cart-icon" class="cart-icon">🛒 <span id="sales-cart-count" class="cart-count">0</span></div></div></div><div id="sales-product-grid" class="product-grid"></div></div>
+            <div id="purchase-order-page" class="page"><div class="page-sub-header"><h2>New Purchase from <span id="purchase-vendor-name"></span></h2><div class="search-container"><input type="text" id="purchase-search-bar" class="search-bar" placeholder="Search products..."><div id="purchase-cart-icon" class="cart-icon">🛒 <span id="purchase-cart-count" class="cart-count">0</span></div></div></div><div id="purchase-product-grid" class="product-grid"></div></div>
+        </div>
+        
+        <nav id="bottom-nav">
+            <div class="nav-item active" data-page="customers-page"><svg class="icon"><use xlink:href="#icon-users"></use></svg> Customers</div>
+            <div class="nav-item" data-page="inventory-page"><svg class="icon"><use xlink:href="#icon-box"></use></svg> Inventory</div>
+            <div class="nav-item" data-page="orders-page"><svg class="icon"><use xlink:href="#icon-clipboard"></use></svg> Orders</div>
+            <div class="nav-item" data-page="purchase-page"><svg class="icon"><use xlink:href="#icon-truck"></use></svg> Purchase</div>
+            <div class="nav-item" data-page="accounts-page"><svg class="icon"><use xlink:href="#icon-wallet"></use></svg> Accounts</div>
+            <div class="nav-item" data-page="reports-page"><svg class="icon"><use xlink:href="#icon-pie-chart"></use></svg> Reports</div>
+        </nav>
+    </div>
+
+    <!-- Modals -->
+    <div id="customer-modal" class="modal"><div class="modal-content"><h2 id="customer-modal-title">Add Customer</h2><input type="hidden" id="customer-id"><input type="text" id="customer-name" placeholder="Customer Name"><input type="tel" id="customer-phone" placeholder="Phone Number"><div class="modal-buttons"><button class="btn close-btn">Cancel</button><button class="btn save-btn" id="save-customer-btn">Save</button></div></div></div>
+    <div id="vendor-modal" class="modal"><div class="modal-content"><h2>Add Vendor</h2><input type="text" id="vendor-name" placeholder="Vendor Name"><input type="tel" id="vendor-phone" placeholder="Phone Number"><div class="modal-buttons"><button class="btn close-btn">Cancel</button><button class="btn save-btn" id="save-vendor-btn">Save</button></div></div></div>
+    <div id="inventory-modal" class="modal"><div class="modal-content"><h2 id="inventory-modal-title">Add Item</h2><input type="hidden" id="item-id"><input type="text" id="item-name" placeholder="Item Name"><input type="text" id="item-cost" placeholder="Last Cost" readonly><input type="number" id="item-mrp" placeholder="MRP"><input type="number" id="item-p1" placeholder="Price 1 (P1)"><input type="number" id="item-p2" placeholder="Price 2 (P2)"><div class="modal-buttons"><button class="btn close-btn">Cancel</button><button class="btn save-btn" id="save-item-btn">Save</button></div></div></div>
+    <div id="sales-cart-modal" class="modal"><div class="modal-content"><h2>Your Cart</h2><ul id="sales-cart-items" class="cart-items-list"></ul><div id="sales-cart-total" class="cart-total">Total: ₹<span id="sales-cart-total-amount">0.00</span></div><div class="modal-buttons"><button class="btn close-btn">Close</button><button class="btn" id="confirm-order-btn">Confirm Order</button></div></div></div>
+    <div id="purchase-cart-modal" class="modal"><div class="modal-content"><h2>Purchase Cart</h2><ul id="purchase-cart-items" class="cart-items-list"></ul><div id="purchase-cart-total" class="cart-total">Total: ₹<span id="purchase-cart-total-amount">0.00</span></div><div class="modal-buttons"><button class="btn close-btn">Close</button><button class="btn" id="confirm-purchase-btn">Confirm Purchase</button></div></div></div>
+    <div id="bill-modal" class="modal"><div class="modal-content"><div id="bill-content"></div><div class="modal-buttons"><button class="btn close-btn">Close</button><button class="btn" id="download-bill-btn">Print Bill</button></div></div></div>
+    <div id="success-animation"><svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg><p>Success!</p></div>
 
     <script>
-    const initialCustomers = [{CustomerCode:"C001",Customer:"SALALA BAKERY",Contact:"9999999999",Outstanding:10},{CustomerCode:"C002",Customer:"AKBAR IRIKKUR",Contact:"9999999999",Outstanding:10}];
-    const initialItems = [{ItemName:"YELLOW MIXTURE",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10},{ItemName:"RED MIXTURE",CostRate:25,Mrp:55,Price1:28,Price2:27.5,Price3:27,Clstock:10}];
-    const initialVendors = [{VendorCode:"V001",VendorName:"AMAL TRADERS",Contact:"9876543210",AmountDue:1500},{VendorCode:"V002",VendorName:"NATIONAL AGENCIES",Contact:"9876543211",AmountDue:0}];
-    let customers=[],items=[],vendors=[],salesOrders=[],purchaseOrders=[],currentOrder=[],currentPurchase=[],currentCustomer=null,currentVendor=null,currentPaymentParty=null,selectedProduct=null,currentEditingItem=null,paymentType=null;
-    
-    const formatCurrency = (num) => (num || 0).toLocaleString("en-IN",{style:"currency",currency:"INR"});
-    const saveData = () => {localStorage.setItem("pvr-data-v12",JSON.stringify({customers,items,vendors,salesOrders,purchaseOrders}))};
-    const loadData = () => {const data=JSON.parse(localStorage.getItem("pvr-data-v12"));customers=data?.customers||initialCustomers;items=data?.items||initialItems;vendors=data?.vendors||initialVendors;salesOrders=data?.salesOrders||[];purchaseOrders=data?.purchaseOrders||[];data||saveData()};
-    
-    const showPage = (pageId) => {document.querySelectorAll(".page").forEach(p=>p.classList.remove("active")),document.getElementById(pageId).classList.add("active")};
-    const showMainPage = () => {showPage("mainAppPage");renderAllLists()};
-    const showTab = (tabName) => {document.querySelectorAll(".tab-content, .nav-button").forEach(el=>el.classList.remove("active"));document.getElementById(`${tabName}Tab`).classList.add("active"),document.querySelector(`.nav-button[onclick="showTab('${tabName}')"]`).classList.add("active");updateFab(tabName);};
-    const showSuccessAnimation = (message) => {document.getElementById("successMessage").textContent=message;const overlay=document.getElementById("successOverlay");overlay.classList.add("active");setTimeout(()=>overlay.classList.remove("active"),1800)};
+    document.addEventListener('DOMContentLoaded', () => {
+        const getData = (key) => JSON.parse(localStorage.getItem(key)) || [];
+        const saveData = (key, data) => localStorage.setItem(key, JSON.stringify(data));
 
-    const renderAllLists = () => {renderCustomers();renderVendors();renderOrders();renderInventory();renderPayments()};
-    const renderCustomers = () => {const list=document.getElementById("customerList"),term=document.getElementById("customerSearch").value.toLowerCase(),filtered=customers.filter(c=>c.Customer.toLowerCase().includes(term));list.innerHTML=filtered.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No customers found.</p>`:filtered.map(c=>`<div class="card list-card"><div><div class="list-card-title">${c.Customer}</div><div class="list-card-balance ${c.Outstanding>0?"due":"zero"}">Balance: ${formatCurrency(c.Outstanding)}</div></div><button class="btn btn-primary btn-small" onclick="startOrder('${c.CustomerCode}')">Sale</button></div>`).join("")};
-    const renderVendors = () => {const list=document.getElementById("vendorList"),term=document.getElementById("vendorSearch").value.toLowerCase(),filtered=vendors.filter(v=>v.VendorName.toLowerCase().includes(term));list.innerHTML=filtered.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No vendors found.</p>`:filtered.map(v=>`<div class="card list-card"><div><div class="list-card-title">${v.VendorName}</div><div class="list-card-balance ${v.AmountDue>0?"due":"zero"}">Amount Due: ${formatCurrency(v.AmountDue)}</div></div><button class="btn btn-primary btn-small" onclick="startPurchase('${v.VendorCode}')">Purchase</button></div>`).join("")};
-    const renderOrders = () => {
-        const list = document.getElementById("ordersList");
-        list.innerHTML = salesOrders.length === 0
-            ? `<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No sales orders recorded.</p>`
-            : salesOrders.slice().reverse().map(o => {
-                // Find the customer to get their contact details
-                const customer = customers.find(c => c.CustomerCode === o.customerCode);
-                const customerContact = customer ? customer.Contact : 'N/A';
+        const initData = () => {
+            if (!localStorage.getItem('pvr_customers')) saveData('pvr_customers', [{ id: Date.now(), name: 'Walk-in Customer', phone: '' }]);
+            if (!localStorage.getItem('pvr_inventory')) saveData('pvr_inventory', [{ id: Date.now() + 1, name: 'Sample Product A', mrp: 100, p1: 90, p2: 85 }, { id: Date.now() + 2, name: 'Sample Product B', mrp: 250, p1: 220, p2: 210 }]);
+            if (!localStorage.getItem('pvr_orders')) saveData('pvr_orders', []);
+            if (!localStorage.getItem('pvr_vendors')) saveData('pvr_vendors', [{ id: Date.now(), name: 'Default Supplier', phone: '' }]);
+            if (!localStorage.getItem('pvr_purchases')) saveData('pvr_purchases', []);
+        };
 
-                return `<div class="card order-card">
-                            <div class="order-card-info">
-                                <span class="order-card-title">${o.customerName}</span>
-                                <span class="order-card-meta">ID: ${o.orderId} | Date: ${o.date}</span>
-                            </div>
-                            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
-                                <span class="order-card-total">${formatCurrency(o.totalAmount)}</span>
-                                <button class="btn btn-small" style="background-color: var(--primary-color); color: white;" onclick="downloadBill('${o.orderId}')">Download Bill</button>
-                            </div>
-                        </div>`;
-            }).join("");
-    };
-    const renderInventory = () => {document.getElementById("inventoryList").innerHTML=items.map(i=>`<div class="card list-card"><div><div class="list-card-title">${i.ItemName}</div><div style="font-size:0.8rem;color:var(--text-muted-color);">Stock: ${i.Clstock} | Cost: ${formatCurrency(i.CostRate)}</div></div><button class="btn btn-primary btn-small" onclick="openStockModal('${i.ItemName}')">Edit</button></div>`).join("")};
-    const renderPayments = () => {
-        const totalReceivables = customers.reduce((sum,c)=>sum+c.Outstanding,0);
-        const totalPayables = vendors.reduce((sum,v)=>sum+v.AmountDue,0);
-        document.getElementById('totalReceivables').textContent = formatCurrency(totalReceivables);
-        document.getElementById('totalPayables').textContent = formatCurrency(totalPayables);
+        let currentOrderCustomer = null, salesCart = [], currentPurchaseVendor = null, purchaseCart = [];
 
-        const receivablesFiltered=customers.filter(c=>c.Outstanding!=0);
-        document.getElementById("receivablesList").innerHTML=receivablesFiltered.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No pending receivables.</p>`:receivablesFiltered.sort((a,b)=>b.Outstanding-a.Outstanding).map(c=>`<div class="card list-card"><div><div class="list-card-title">${c.Customer}</div><div class="list-card-balance due">Balance: ${formatCurrency(c.Outstanding)}</div></div><button class="btn btn-success btn-small" onclick="showPaymentPage('customer','${c.CustomerCode}')">Collect</button></div>`).join("");
+        // --- Element Refs ---
+        const loginScreen = document.getElementById('login-screen'), mainApp = document.getElementById('main-app');
+        const pages = document.querySelectorAll('.page'), navItems = document.querySelectorAll('.nav-item'), allModals = document.querySelectorAll('.modal');
+        const customerList = document.getElementById('customer-list'), customerModal = document.getElementById('customer-modal');
+        const customerForm = { id: document.getElementById('customer-id'), name: document.getElementById('customer-name'), phone: document.getElementById('customer-phone'), btn: document.getElementById('save-customer-btn'), title: document.getElementById('customer-modal-title') };
+        const inventoryList = document.getElementById('inventory-list'), inventoryModal = document.getElementById('inventory-modal');
+        const itemForm = { id: document.getElementById('item-id'), name: document.getElementById('item-name'), mrp: document.getElementById('item-mrp'), cost: document.getElementById('item-cost'), p1: document.getElementById('item-p1'), p2: document.getElementById('item-p2'), btn: document.getElementById('save-item-btn'), title: document.getElementById('inventory-modal-title') };
+        const orderList = document.getElementById('order-list'), orderCreationPage = document.getElementById('order-creation-page'), orderCustomerName = document.getElementById('order-customer-name');
+        const salesProductGrid = document.getElementById('sales-product-grid'), salesSearchBar = document.getElementById('sales-search-bar');
+        const salesCartIcon = document.getElementById('sales-cart-icon'), salesCartCount = document.getElementById('sales-cart-count'), salesCartModal = document.getElementById('sales-cart-modal'), salesCartItemsList = document.getElementById('sales-cart-items'), salesCartTotalAmountSpan = document.getElementById('sales-cart-total-amount'), confirmOrderBtn = document.getElementById('confirm-order-btn');
+        const billModal = document.getElementById('bill-modal'), billContent = document.getElementById('bill-content');
+        const vendorList = document.getElementById('vendor-list'), vendorModal = document.getElementById('vendor-modal');
+        const vendorForm = { name: document.getElementById('vendor-name'), phone: document.getElementById('vendor-phone'), btn: document.getElementById('save-vendor-btn') };
+        const purchaseOrderPage = document.getElementById('purchase-order-page'), purchaseVendorName = document.getElementById('purchase-vendor-name');
+        const purchaseProductGrid = document.getElementById('purchase-product-grid'), purchaseSearchBar = document.getElementById('purchase-search-bar');
+        const purchaseCartIcon = document.getElementById('purchase-cart-icon'), purchaseCartCount = document.getElementById('purchase-cart-count'), purchaseCartModal = document.getElementById('purchase-cart-modal'), purchaseCartItemsList = document.getElementById('purchase-cart-items'), purchaseCartTotalAmountSpan = document.getElementById('purchase-cart-total-amount'), confirmPurchaseBtn = document.getElementById('confirm-purchase-btn');
+        const reportsContent = document.getElementById('reports-content');
+        const accountsSubNav = document.querySelector('.sub-nav');
+        const receivablesContent = document.getElementById('receivables-content').querySelector('.item-list');
+        const payablesContent = document.getElementById('payables-content').querySelector('.item-list');
         
-        const payablesFiltered=vendors.filter(v=>v.AmountDue!=0);
-        document.getElementById("payablesList").innerHTML=payablesFiltered.length===0?`<p style="text-align:center;padding:1rem;color:var(--text-muted-color);">No pending payables.</p>`:payablesFiltered.sort((a,b)=>b.AmountDue-a.AmountDue).map(v=>`<div class="card list-card"><div><div class="list-card-title">${v.VendorName}</div><div class="list-card-balance due">Due: ${formatCurrency(v.AmountDue)}</div></div><button class="btn btn-success btn-small" onclick="showPaymentPage('vendor','${v.VendorCode}')">Pay</button></div>`).join("");
-    };
-    
-    const openStockModal = (itemName) => {currentEditingItem=items.find(i=>i.ItemName===itemName);document.getElementById("stockModalTitle").textContent=`Edit: ${currentEditingItem.ItemName}`;["Clstock","CostRate","Price1","Price2","Price3"].forEach(field=>document.getElementById(`stockModal${field}`).value=currentEditingItem[field]);document.getElementById("stockEditModal").classList.add("active")};
-    const closeAllModals = () => document.querySelectorAll(".modal-overlay").forEach(m=>m.classList.remove("active"));
-    const confirmStockEdit = () => {["Clstock","CostRate","Price1","Price2","Price3"].forEach(field=>currentEditingItem[field]=parseFloat(document.getElementById(`stockModal${field}`).value)||0);saveData();renderInventory();closeAllModals()};
-    
-    const showPaymentPage = (type, code) => {
-        paymentType=type;
-        if(type==='customer'){currentPaymentParty=customers.find(c=>c.CustomerCode===code);document.getElementById("paymentPartyName").textContent=`Payment from ${currentPaymentParty.Customer}`;document.getElementById("currentBalanceLabel").textContent="Current Balance";}
-        else{currentPaymentParty=vendors.find(v=>v.VendorCode===code);document.getElementById("paymentPartyName").textContent=`Payment to ${currentPaymentParty.VendorName}`;document.getElementById("currentBalanceLabel").textContent="Current Amount Due";}
-        document.getElementById("currentBalanceText").textContent=formatCurrency(type==='customer'?currentPaymentParty.Outstanding:currentPaymentParty.AmountDue);
-        document.getElementById("paymentAmountInput").value="";updateNewBalance();showPage("paymentPage");document.getElementById("paymentAmountInput").focus();
-    };
-    const updateNewBalance = () => {const payment=parseFloat(document.getElementById("paymentAmountInput").value)||0;const currentBalance=paymentType==='customer'?currentPaymentParty.Outstanding:currentPaymentParty.AmountDue;document.getElementById("newBalanceText").textContent=formatCurrency(currentBalance-payment)};
-    const confirmPayment = () => {const payment=parseFloat(document.getElementById("paymentAmountInput").value)||0;if(payment<=0)return alert("Please enter a valid amount.");paymentType==='customer'?currentPaymentParty.Outstanding-=payment:currentPaymentParty.AmountDue-=payment;saveData();showSuccessAnimation("Payment Recorded!");setTimeout(()=>showMainPage(),1800)};
-
-    const startOrder = (customerCode) => {currentCustomer=customers.find(c=>c.CustomerCode===customerCode);currentOrder=[];document.getElementById("orderCustomerName").textContent=`Order for ${currentCustomer.Customer}`;["item-entry-form","orderSummaryContainer"].forEach(id=>document.getElementById(id).style.display="none");document.getElementById("order-footer").style.display="block";resetOrderForm();renderOrderSummary();showPage("orderPage")};
-    const resetOrderForm = () => {document.getElementById("productSearch").value="";document.getElementById("productSearchResults").innerHTML="";document.getElementById("item-entry-form").style.display="none";document.getElementById("itemQuantity").value=1};
-    const handleProductSearch = () => {const term=document.getElementById("productSearch").value.toLowerCase(),results=document.getElementById("productSearchResults");results.innerHTML=term.length<2?"":items.filter(i=>i.ItemName.toLowerCase().includes(term)&&i.Clstock>0).map(i=>`<div class="product-search-item" onclick="selectProductForOrder('${i.ItemName}')">${i.ItemName} <small>(Stock: ${i.Clstock})</small></div>`).join("")};
-    const selectProductForOrder = (itemName) => {selectedProduct=items.find(i=>i.ItemName===itemName);resetOrderForm();document.getElementById("item-entry-form").style.display="block";document.getElementById("selectedItemName").textContent=selectedProduct.ItemName;document.getElementById("price-options-container").innerHTML=[1,2,3].map(n=>`<input type="radio" name="price" id="price${n}" value="${selectedProduct["Price"+n]}" ${n===1?"checked":""}><label for="price${n}">${formatCurrency(selectedProduct["Price"+n])}</label>`).join("");document.getElementById("itemQuantity").focus()};
-    const addItemToOrder = () => {const qty=parseInt(document.getElementById("itemQuantity").value),price=parseFloat(document.querySelector('input[name="price"]:checked').value);if(!selectedProduct||isNaN(qty)||qty<=0)return alert("Invalid quantity.");if(qty>selectedProduct.Clstock)return alert(`Not enough stock. Only ${selectedProduct.Clstock} available.`);const existing=currentOrder.find(i=>i.name===selectedProduct.ItemName&&i.price===price);if(existing){existing.quantity+=qty;existing.total=existing.quantity*existing.price}else{currentOrder.push({name:selectedProduct.ItemName,quantity:qty,price:price,total:qty*price,cost:selectedProduct.CostRate})}document.getElementById("orderSummaryContainer").style.display="block";renderOrderSummary();resetOrderForm()};
-    const renderOrderSummary = () => {const body=document.getElementById("orderSummaryBody");let margin=0;body.innerHTML=currentOrder.length===0?`<tr><td colspan="4" class="text-center text-muted">No items added.</td></tr>`:currentOrder.map(i=>{margin+=(i.price-i.cost)*i.quantity;return`<tr><td>${i.name}</td><td>${i.quantity}</td><td>${i.price.toFixed(2)}</td><td>${i.total.toFixed(2)}</td></tr>`}).join("");document.getElementById("totalMargin").textContent=formatCurrency(margin)};
-    const confirmOrder = () => {if(currentOrder.length===0)return alert("Cannot confirm an empty order.");let orderTotal=0;currentOrder.forEach(orderItem=>{const stockItem=items.find(i=>i.ItemName===orderItem.name);if(stockItem)stockItem.Clstock-=orderItem.quantity;orderTotal+=orderItem.total});currentCustomer.Outstanding+=orderTotal;const newOrder={orderId:Date.now(),customerCode:currentCustomer.CustomerCode,customerName:currentCustomer.Customer,date:new Date().toLocaleDateString("en-GB"),totalAmount:orderTotal,items:currentOrder};salesOrders.push(newOrder);saveData();showSuccessAnimation("Order Confirmed!");setTimeout(()=>showMainPage(),1800)};
-    
-    const startPurchase = (vendorCode) => {currentVendor=vendors.find(v=>v.VendorCode===vendorCode);currentPurchase=[];document.getElementById("purchaseVendorName").textContent=`Purchase from ${currentVendor.VendorName}`;["purchase-entry-form","purchaseSummaryContainer"].forEach(id=>document.getElementById(id).style.display="none");resetPurchaseForm();renderPurchaseSummary();showPage("purchasePage")};
-    const resetPurchaseForm = () => {document.getElementById("purchaseItemSearch").value="";document.getElementById("purchaseItemSearchResults").innerHTML="";document.getElementById("purchase-entry-form").style.display="none";document.getElementById("purchaseQuantity").value=1;document.getElementById("purchaseCost").value=""};
-    const handlePurchaseItemSearch = () => {const term=document.getElementById("purchaseItemSearch").value.toLowerCase(),results=document.getElementById("purchaseItemSearchResults");results.innerHTML=term.length<1?"":items.map(i=>`<div class="product-search-item" onclick="selectItemForPurchase('${i.ItemName}')">${i.ItemName}</div>`).join("")};
-    const selectItemForPurchase = (itemName) => {selectedProduct=items.find(i=>i.ItemName===itemName);resetPurchaseForm();document.getElementById("purchase-entry-form").style.display="block";document.getElementById("selectedPurchaseItemName").textContent=selectedProduct.ItemName;document.getElementById("purchaseCost").value=selectedProduct.CostRate;document.getElementById("purchaseQuantity").focus()};
-    const addItemToPurchase = () => {const qty=parseInt(document.getElementById("purchaseQuantity").value),cost=parseFloat(document.getElementById("purchaseCost").value);if(!selectedProduct||isNaN(qty)||qty<=0||isNaN(cost))return alert("Invalid quantity or cost.");const existing=currentPurchase.find(i=>i.name===selectedProduct.ItemName&&i.cost===cost);if(existing){existing.quantity+=qty;existing.total=existing.quantity*existing.cost}else{currentPurchase.push({name:selectedProduct.ItemName,quantity:qty,cost:cost,total:qty*cost})}document.getElementById("purchaseSummaryContainer").style.display="block";renderPurchaseSummary();resetPurchaseForm()};
-    const renderPurchaseSummary = () => {const body=document.getElementById("purchaseSummaryBody");let total=0;body.innerHTML=currentPurchase.length===0?`<tr><td colspan="4" class="text-center text-muted">No items added.</td></tr>`:currentPurchase.map(i=>{total+=i.total;return`<tr><td>${i.name}</td><td>${i.quantity}</td><td>${i.cost.toFixed(2)}</td><td>${i.total.toFixed(2)}</td></tr>`}).join("");document.getElementById("purchaseTotal").textContent=formatCurrency(total)};
-    const confirmPurchase = () => {if(currentPurchase.length===0)return alert("Cannot confirm an empty purchase.");let purchaseTotal=0;currentPurchase.forEach(pItem=>{const stockItem=items.find(i=>i.ItemName===pItem.name);if(stockItem)stockItem.Clstock+=pItem.quantity;purchaseTotal+=pItem.total});currentVendor.AmountDue+=purchaseTotal;purchaseOrders.push({purchaseId:Date.now(),vendorCode:currentVendor.VendorCode,vendorName:currentVendor.VendorName,date:new Date().toLocaleDateString("en-GB"),totalAmount:purchaseTotal,items:currentPurchase});saveData();showSuccessAnimation("Purchase Recorded!");setTimeout(()=>showMainPage(),1800)};
-    
-    const updateFab = (tab) => {const fab=document.getElementById("fab");const actions={sale:()=>openAddModal("customer"),purchase:()=>openAddModal("vendor"),inventory:()=>openAddModal("item")};if(actions[tab]){fab.onclick=actions[tab];fab.classList.add("active")}else{fab.classList.remove("active")}};
-    const openAddModal = (type) => {closeAllModals();document.getElementById(`add${type.charAt(0).toUpperCase()+type.slice(1)}Modal`).classList.add("active")};
-    const saveNewCustomer = () => {const name=document.getElementById("newCustomerName").value.trim(),contact=document.getElementById("newCustomerContact").value;if(!name)return alert("Customer name is required.");customers.push({CustomerCode:`C${Date.now()}`,Customer:name,Contact:contact,Outstanding:0});saveData();renderCustomers();closeAllModals()};
-    const saveNewVendor = () => {const name=document.getElementById("newVendorName").value.trim(),contact=document.getElementById("newVendorContact").value;if(!name)return alert("Vendor name is required.");vendors.push({VendorCode:`V${Date.now()}`,VendorName:name,Contact:contact,AmountDue:0});saveData();renderVendors();closeAllModals()};
-    const saveNewItem = () => {
-        const name = document.getElementById("newItemName").value.trim();
-        const cost = parseFloat(document.getElementById("newItemCostRate").value) || 0;
-        const mrp = parseFloat(document.getElementById("newItemMrp").value) || 0;
-        const price1 = parseFloat(document.getElementById("newItemPrice1").value) || 0;
-        const price2 = parseFloat(document.getElementById("newItemPrice2").value) || 0;
-        const price3 = parseFloat(document.getElementById("newItemPrice3").value) || 0;
-        const stock = parseInt(document.getElementById("newItemClstock").value) || 0;
+        // --- Render Functions ---
+        const renderCustomers = () => { customerList.innerHTML = getData('pvr_customers').map(c => `<li class="list-item"><div><strong>${c.name}</strong><br><small>${c.phone}</small></div><button class="btn order-btn" data-id="${c.id}">Order</button></li>`).join(''); };
+        const renderInventory = () => { inventoryList.innerHTML = getData('pvr_inventory').map(i => `<li class="list-item"><div><strong>${i.name}</strong><br><small>MRP: ${i.mrp} | P1: ${i.p1} | P2: ${i.p2}</small></div><button class="btn edit-btn" data-id="${i.id}">Edit</button></li>`).join(''); };
+        const renderVendors = () => { vendorList.innerHTML = getData('pvr_vendors').map(v => `<li class="list-item"><div><strong>${v.name}</strong><br><small>${v.phone}</small></div><button class="btn purchase-btn" data-id="${v.id}">Purchase</button></li>`).join(''); };
+        const renderOrders = () => { const orders = getData('pvr_orders').sort((a,b) => b.createdAt - a.createdAt); const customers = getData('pvr_customers'); orderList.innerHTML = orders.map(o => { const customer = customers.find(c => c.id === o.customerId); return `<li class="list-item"><div><strong>Invoice #${o.id} for ${customer ? customer.name : 'Unknown'}</strong><br><small>${new Date(o.createdAt).toLocaleString()} - Total: ₹${o.total.toFixed(2)}</small></div><button class="btn view-bill-btn" data-id="${o.id}">View Bill</button></li>`; }).join(''); };
+        const renderReports = () => {
+            const orders = getData('pvr_orders'); const purchases = getData('pvr_purchases'); const customers = getData('pvr_customers'); const inventory = getData('pvr_inventory');
+            const allPurchasedItems = purchases.flatMap(p => p.items).sort((a, b) => a.createdAt - b.createdAt);
+            const getCost = (itemId, orderTimestamp) => { const relevantPurchases = allPurchasedItems.filter(p => p.inventoryId === itemId && p.createdAt <= orderTimestamp); return relevantPurchases.length > 0 ? relevantPurchases[relevantPurchases.length - 1].cost : 0; };
+            let totalSales = 0, totalCOGS = 0;
+            orders.forEach(order => { totalSales += order.total; order.items.forEach(item => { totalCOGS += getCost(item.id, order.createdAt) * item.quantity; }); });
+            const grossProfit = totalSales - totalCOGS;
+            const productProfit = {}; inventory.forEach(inv => { productProfit[inv.id] = { name: inv.name, revenue: 0, cogs: 0 }; });
+            orders.forEach(order => { order.items.forEach(item => { const itemRevenue = item.price * item.quantity; const itemCOGS = getCost(item.id, order.createdAt) * item.quantity; if(productProfit[item.id]) { productProfit[item.id].revenue += itemRevenue; productProfit[item.id].cogs += itemCOGS; } }); });
+            const productProfitList = Object.values(productProfit).map(p => { const profit = p.revenue - p.cogs; const margin = p.revenue > 0 ? (profit / p.revenue) * 100 : 0; return { ...p, profit, margin }; }).sort((a,b) => b.profit - a.profit);
+            const customerProfit = {}; customers.forEach(cust => { customerProfit[cust.id] = { name: cust.name, revenue: 0, cogs: 0 }; });
+            orders.forEach(order => { if(customerProfit[order.customerId]) { let orderCOGS = 0; order.items.forEach(item => orderCOGS += getCost(item.id, order.createdAt) * item.quantity); customerProfit[order.customerId].revenue += order.total; customerProfit[order.customerId].cogs += orderCOGS; } });
+            const customerProfitList = Object.values(customerProfit).map(c => { const profit = c.revenue - c.cogs; const margin = c.revenue > 0 ? (profit / c.revenue) * 100 : 0; return { ...c, profit, margin }; }).sort((a,b) => b.profit - a.profit);
+            reportsContent.innerHTML = `<div class="kpi-grid"><div class="kpi-card sales"><h3>Total Sales</h3><div class="value">₹${totalSales.toFixed(2)}</div></div><div class="kpi-card purchases"><h3>Total Cost</h3><div class="value">₹${totalCOGS.toFixed(2)}</div></div><div class="kpi-card profit"><h3>Gross Profit</h3><div class="value">₹${grossProfit.toFixed(2)}</div></div></div><div class="report-section"><h3>Profitability by Product</h3><table class="report-table"><thead><tr><th>Product</th><th>Revenue</th><th>Profit</th><th>Margin</th></tr></thead><tbody>${productProfitList.map(p => `<tr><td>${p.name}</td><td>₹${p.revenue.toFixed(2)}</td><td>₹${p.profit.toFixed(2)}</td><td>${p.margin.toFixed(1)}%</td></tr>`).join('')}</tbody></table></div><div class="report-section"><h3>Profitability by Customer</h3><table class="report-table"><thead><tr><th>Customer</th><th>Revenue</th><th>Profit</th><th>Margin</th></tr></thead><tbody>${customerProfitList.map(c => `<tr><td>${c.name}</td><td>₹${c.revenue.toFixed(2)}</td><td>₹${c.profit.toFixed(2)}</td><td>${c.margin.toFixed(1)}%</td></tr>`).join('')}</tbody></table></div>`;
+        };
+        const renderReceivables = () => { const customers = getData('pvr_customers'); const orders = getData('pvr_orders'); receivablesContent.innerHTML = customers.map(c => { const pendingAmount = orders.filter(o => o.customerId === c.id && o.status === 'unpaid').reduce((sum, o) => sum + o.total, 0); return `<li class="list-item"><div><strong>${c.name}</strong><br><small>Pending: ₹${pendingAmount.toFixed(2)}</small></div>${pendingAmount > 0 ? `<button class="btn mark-paid-btn" data-type="receivable" data-id="${c.id}">Mark as Paid</button>` : ''}</li>`; }).join(''); };
+        const renderPayables = () => { const vendors = getData('pvr_vendors'); const purchases = getData('pvr_purchases'); payablesContent.innerHTML = vendors.map(v => { const pendingAmount = purchases.filter(p => p.vendorId === v.id && p.status === 'unpaid').reduce((sum, p) => sum + p.total, 0); return `<li class="list-item"><div><strong>${v.name}</strong><br><small>Pending: ₹${pendingAmount.toFixed(2)}</small></div>${pendingAmount > 0 ? `<button class="btn mark-paid-btn" data-type="payable" data-id="${v.id}">Mark as Paid</button>` : ''}</li>`; }).join(''); };
+        const renderSalesProductGrid = (filter = '') => { salesProductGrid.innerHTML = getData('pvr_inventory').filter(i => i.name.toLowerCase().includes(filter.toLowerCase())).map(item => `<div class="product-tile"><div class="product-info"><span class="product-name">${item.name}</span><span class="product-mrp">MRP: ₹${item.mrp}</span></div><div class="product-actions" data-id="${item.id}" data-name="${item.name}"><div class="action-item"><button class="control price-btn" data-price="${item.p1}">${item.p1}</button><div class="label">P1</div></div><div class="action-item"><button class="control price-btn" data-price="${item.p2}">${item.p2}</button><div class="label">P2</div></div><div class="action-item"><input type="number" class="control custom-price" placeholder="Rate"><div class="label">Custom</div></div><div class="action-item"><input type="number" class="control quantity" value="1" min="1"><div class="label">Qty</div></div><div class="action-item"><button class="control add-to-cart-btn">Add</button><div class="label">&nbsp;</div></div></div></div>`).join(''); };
+        const renderPurchaseProductGrid = (filter = '') => { purchaseProductGrid.innerHTML = getData('pvr_inventory').filter(i => i.name.toLowerCase().includes(filter.toLowerCase())).map(item => `<div class="product-tile"><div class="product-info"><span class="product-name">${item.name}</span></div><div class="purchase-actions" data-id="${item.id}" data-name="${item.name}"><div class="action-item"><input type="number" class="control purchase-cost" placeholder="Cost"><div class="label">Cost/Item</div></div><div class="action-item"><input type="number" class="control purchase-quantity" value="1" min="1"><div class="label">Qty</div></div><div class="action-item"><button class="control add-to-purchase-btn">Add</button><div class="label">&nbsp;</div></div></div></div>`).join(''); };
         
-        if (!name) return alert("Item name is required.");
+        // --- App Logic ---
+        const navigateToPage = (pageId) => { if (orderCreationPage.classList.contains('active') || purchaseOrderPage.classList.contains('active')) { resetSalesPage(); resetPurchasePage(); } pages.forEach(p => p.classList.remove('active')); document.getElementById(pageId).classList.add('active'); navItems.forEach(nav => nav.classList.remove('active')); const nav = document.querySelector(`.nav-item[data-page="${pageId}"]`); if(nav) nav.classList.add('active'); if(pageId === 'reports-page') renderReports(); if(pageId === 'accounts-page') { renderReceivables(); renderPayables(); } };
+        const openModal = (modal) => modal.style.display = 'block'; const closeModal = (modal) => modal.style.display = 'none';
+        const resetSalesPage = () => { salesCart = []; currentOrderCustomer = null; salesSearchBar.value = ''; updateSalesCartUI(); };
+        const resetPurchasePage = () => { purchaseCart = []; currentPurchaseVendor = null; purchaseSearchBar.value = ''; updatePurchaseCartUI(); };
+        const updateSalesCartUI = () => { salesCartCount.innerText = salesCart.length; let total = 0; salesCartItemsList.innerHTML = salesCart.map((item, index) => { const itemTotal = item.price * item.quantity; total += itemTotal; return `<li><span>${item.name} (x${item.quantity})</span><div class="cart-item-details"><span>₹${itemTotal.toFixed(2)}</span><button class="delete-cart-item-btn" data-type="sales" data-index="${index}">&#128465;</button></div></li>`; }).join(''); salesCartTotalAmountSpan.innerText = total.toFixed(2); };
+        const updatePurchaseCartUI = () => { purchaseCartCount.innerText = purchaseCart.length; let total = 0; purchaseCartItemsList.innerHTML = purchaseCart.map((item, index) => { total += item.totalCost; return `<li><span>${item.name} (x${item.quantity} @ ₹${item.cost})</span><div class="cart-item-details"><span>₹${item.totalCost.toFixed(2)}</span><button class="delete-cart-item-btn" data-type="purchase" data-index="${index}">&#128465;</button></div></li>`; }).join(''); purchaseCartTotalAmountSpan.innerText = total.toFixed(2); };
+        const showSuccessAnimation = () => { const anim = document.getElementById('success-animation'); anim.style.display = 'block'; setTimeout(() => anim.style.display = 'none', 2000); };
+        const generateAndShowBill = (order, customer) => { const itemsHtml = order.items.map((item, index) => `<tr><td>${index + 1}</td><td style="text-align: left;">${item.name}</td><td>${item.quantity}</td><td>₹${item.price.toFixed(2)}</td><td>₹${(item.quantity * item.price).toFixed(2)}</td></tr>`).join(''); billContent.innerHTML = `<div class="bill-container"><div class="bill-header"><h2>PVR DISTRIBUTION</h2><p>Your Trusted Partner</p></div><div class="bill-meta"><div><strong>Billed To:</strong><span>${customer ? customer.name : 'N/A'}</span><br><span>${customer ? customer.phone : ''}</span></div><div class="bill-meta-item"><strong>Invoice #</strong><span>${order.id}</span><strong>Date</strong><span>${new Date(order.createdAt).toLocaleDateString()}</span></div></div><table class="bill-table"><thead><tr><th style="width: 10%;">#</th><th style="text-align: left;">Item</th><th style="width: 15%;">Qty</th><th style="width: 20%;">Rate</th><th style="width: 20%;">Amount</th></tr></thead><tbody>${itemsHtml}</tbody></table><div class="bill-summary"><table><tbody><tr><td>Subtotal</td><td>₹${order.total.toFixed(2)}</td></tr><tr class="total"><td>Total</td><td>₹${order.total.toFixed(2)}</td></tr></tbody></table></div><div class="bill-footer"><p>Thank you for your business!</p></div></div>`; openModal(billModal); };
         
-        items.push({
-            ItemName: name,
-            CostRate: cost,
-            Mrp: mrp,
-            Price1: price1,
-            Price2: price2,
-            Price3: price3,
-            Clstock: stock
-        });
-        saveData();
-        renderInventory();
-        closeAllModals();
-    };
-
-    const downloadBill = (orderId) => {
-        const order = salesOrders.find(o => o.orderId === parseInt(orderId));
-        if (!order) {
-            alert("Order not found!");
-            return;
-        }
-
-        const customer = customers.find(c => c.CustomerCode === order.customerCode);
-        const customerName = customer ? customer.Customer : 'N/A';
-        const customerContact = customer ? customer.Contact : 'N/A';
-
-        let itemsHtml = order.items.map(item => `
-            <tr>
-                <td>${item.name}</td>
-                <td>${item.quantity}</td>
-                <td style="text-align: right;">${formatCurrency(item.price)}</td>
-                <td style="text-align: right;">${formatCurrency(item.total)}</td>
-            </tr>
-        `).join('');
-
-        const billContent = `
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>Invoice - PVR Distribution</title>
-                <style>
-                    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 20px; color: #1D2A39; }
-                    .invoice-container { max-width: 800px; margin: 0 auto; border: 1px solid #ccc; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1); background-color: #fff; }
-                    .header { text-align: center; margin-bottom: 30px; }
-                    .header h1 { color: #0A84FF; margin: 0; font-size: 1.8rem; } /* Smaller header size */
-                    .header p { font-size: 0.9rem; color: #6C757D; }
-                    .details { display: flex; justify-content: space-between; margin-bottom: 20px; }
-                    .details div { width: 48%; }
-                    .details .customer-details { text-align: left; }
-                    .details .invoice-details { text-align: right; } /* Align invoice details to the right */
-                    .details strong { display: block; margin-bottom: 5px; color: #0A84FF; }
-                    .details p { margin: 0; font-size: 0.95rem; }
-                    .items-table { width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; }
-                    .items-table th, .items-table td { border: 1px solid #eee; padding: 10px; text-align: left; }
-                    .items-table th { background-color: #E6E6FA; color: #1D2A39; font-weight: 600; text-align: left; } /* Lavender header */
-                    .items-table th:nth-child(3), .items-table td:nth-child(3),
-                    .items-table th:nth-child(4), .items-table td:nth-child(4) { text-align: right; }
-                    .total-section { text-align: right; margin-top: 20px; }
-                    .total-section div { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 1.1rem; }
-                    .total-section .label { font-weight: 600; color: #1D2A39; }
-                    .total-section .amount { font-weight: 700; color: #FF3B30; }
-
-                    @media print {
-                        body { background-color: #fff; }
-                        .invoice-container { box-shadow: none; border: none; }
-                        /* Ensure text is black for printing */
-                        body, .header p, .details p, .items-table th, .items-table td, .total-section .label {
-                            color: #000 !important;
-                        }
-                        .items-table th {
-                            background-color: #E6E6FA !important; /* Ensure lavender is maintained */
-                            -webkit-print-color-adjust: exact; /* For better color printing */
-                            color-adjust: exact;
-                        }
-                    }
-                </style>
-            </head>
-            <body>
-                <div class="invoice-container">
-                    <div class="header">
-                        <h1>PVR DISTRIBUTION</h1>
-                        <p>Sales Invoice</p>
-                    </div>
-
-                    <div class="details">
-                        <div class="customer-details">
-                            <strong>Customer Details:</strong>
-                            <p>${customerName}</p>
-                            <p>Contact: ${customerContact}</p>
-                        </div>
-                        <div class="invoice-details">
-                            <strong>Invoice Details:</strong>
-                            <p>Order ID: ${order.orderId}</p>
-                            <p>Date: ${order.date}</p>
-                        </div>
-                    </div>
-
-                    <table class="items-table">
-                        <thead>
-                            <tr>
-                                <th>Item</th>
-                                <th>Quantity</th>
-                                <th style="text-align: right;">Price</th>
-                                <th style="text-align: right;">Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${itemsHtml}
-                        </tbody>
-                    </table>
-
-                    <div class="total-section">
-                        <div>
-                            <span class="label">Total Amount:</span>
-                            <span class="amount">${formatCurrency(order.totalAmount)}</span>
-                        </div>
-                    </div>
-                </div>
-            </body>
-            </html>
-        `;
-
-        const printWindow = window.open('', '_blank');
-        printWindow.document.write(billContent);
-        printWindow.document.close();
-        printWindow.focus();
-        // Use a slight delay to ensure content is rendered before printing
-        setTimeout(() => {
-            printWindow.print();
-            printWindow.close();
-        }, 500); // 500ms delay
-    };
-
-    document.addEventListener("DOMContentLoaded",()=>{loadData();renderAllLists();showPage("mainAppPage");showTab("sale")});
+        // --- Event Listeners ---
+        document.getElementById('login-button').addEventListener('click', () => { loginScreen.style.display = 'none'; mainApp.style.display = 'block'; initData(); renderCustomers(); renderInventory(); renderVendors(); renderOrders(); });
+        navItems.forEach(item => item.addEventListener('click', () => navigateToPage(item.dataset.page)));
+        allModals.forEach(modal => modal.addEventListener('click', (e) => { if (e.target.classList.contains('modal') || e.target.classList.contains('close-btn')) closeModal(modal); }));
+        document.getElementById('add-customer-btn').addEventListener('click', () => { customerForm.title.innerText = "Add Customer"; customerForm.id.value = ''; customerForm.name.value = ''; customerForm.phone.value = ''; openModal(customerModal); });
+        customerForm.btn.addEventListener('click', () => { const customers = getData('pvr_customers'); const newCustomer = { id: Date.now(), name: customerForm.name.value.trim(), phone: customerForm.phone.value.trim() }; if (!newCustomer.name) return alert('Customer name is required.'); customers.push(newCustomer); saveData('pvr_customers', customers); renderCustomers(); closeModal(customerModal); });
+        document.getElementById('add-vendor-btn').addEventListener('click', () => openModal(vendorModal));
+        vendorForm.btn.addEventListener('click', () => { const vendors = getData('pvr_vendors'); const newVendor = { id: Date.now(), name: vendorForm.name.value.trim(), phone: vendorForm.phone.value.trim() }; if(!newVendor.name) return alert('Vendor name required'); vendors.push(newVendor); saveData('pvr_vendors', vendors); renderVendors(); closeModal(vendorModal); vendorForm.name.value = ''; vendorForm.phone.value = ''; });
+        document.getElementById('add-item-btn').addEventListener('click', () => { itemForm.title.innerText = "Add Item"; itemForm.id.value = ''; itemForm.name.value = ''; itemForm.mrp.value = ''; itemForm.cost.value = 'N/A'; itemForm.p1.value = ''; itemForm.p2.value = ''; openModal(inventoryModal); });
+        inventoryList.addEventListener('click', e => { if (e.target.classList.contains('edit-btn')) { const inventory = getData('pvr_inventory'); const purchases = getData('pvr_purchases'); const itemId = parseInt(e.target.dataset.id); const item = inventory.find(i => i.id === itemId); if (item) { const allPurchasesForItem = purchases.flatMap(p => p.items).filter(pItem => pItem.inventoryId === itemId); let latestCost = 'N/A'; if (allPurchasesForItem.length > 0) { const latestPurchase = allPurchasesForItem.sort((a, b) => b.createdAt - a.createdAt)[0]; latestCost = `₹${latestPurchase.cost.toFixed(2)}`; } itemForm.title.innerText = "Edit Item"; itemForm.id.value = item.id; itemForm.name.value = item.name; itemForm.mrp.value = item.mrp; itemForm.cost.value = latestCost; itemForm.p1.value = item.p1; itemForm.p2.value = item.p2; openModal(inventoryModal); } } });
+        itemForm.btn.addEventListener('click', () => { let inventory = getData('pvr_inventory'); const itemData = { id: itemForm.id.value ? parseInt(itemForm.id.value) : Date.now(), name: itemForm.name.value.trim(), mrp: parseFloat(itemForm.mrp.value), p1: parseFloat(itemForm.p1.value), p2: parseFloat(itemForm.p2.value) }; if (!itemData.name || isNaN(itemData.mrp)) return alert('Name and MRP required.'); if (itemForm.id.value) inventory = inventory.map(i => i.id === itemData.id ? itemData : i); else inventory.push(itemData); saveData('pvr_inventory', inventory); renderInventory(); closeModal(inventoryModal); });
+        customerList.addEventListener('click', e => { if (e.target.classList.contains('order-btn')) { currentOrderCustomer = getData('pvr_customers').find(c => c.id == e.target.dataset.id); if (currentOrderCustomer) { orderCustomerName.innerText = currentOrderCustomer.name; renderSalesProductGrid(); navigateToPage('order-creation-page'); } } });
+        vendorList.addEventListener('click', e => { if(e.target.classList.contains('purchase-btn')) { currentPurchaseVendor = getData('pvr_vendors').find(v => v.id == e.target.dataset.id); if(currentPurchaseVendor) { purchaseVendorName.innerText = currentPurchaseVendor.name; renderPurchaseProductGrid(); navigateToPage('purchase-order-page'); } } });
+        salesSearchBar.addEventListener('input', e => renderSalesProductGrid(e.target.value));
+        purchaseSearchBar.addEventListener('input', e => renderPurchaseProductGrid(e.target.value));
+        salesProductGrid.addEventListener('click', e => { const tile = e.target.closest('.product-tile'); if (!tile) return; const actionsDiv = tile.querySelector('.product-actions'); const allPriceBtns = actionsDiv.querySelectorAll('.price-btn'); const customPriceInput = actionsDiv.querySelector('.custom-price'); if (e.target.classList.contains('price-btn')) { allPriceBtns.forEach(btn => btn.classList.remove('selected')); e.target.classList.add('selected'); customPriceInput.value = ''; } if (e.target.classList.contains('add-to-cart-btn')) { const selectedBtn = actionsDiv.querySelector('.price-btn.selected'); let price = parseFloat(customPriceInput.value); if (selectedBtn && !price) price = parseFloat(selectedBtn.dataset.price); const quantity = parseInt(actionsDiv.querySelector('.quantity').value); if (isNaN(price) || price <= 0 || isNaN(quantity) || quantity <= 0) return alert("Please select or enter a valid price and quantity."); const item = { id: parseInt(actionsDiv.dataset.id), name: actionsDiv.dataset.name, price, quantity }; const existing = salesCart.find(ci => ci.id === item.id && ci.price === item.price); if (existing) existing.quantity += item.quantity; else salesCart.push(item); updateSalesCartUI(); customPriceInput.value = ''; actionsDiv.querySelector('.quantity').value = 1; allPriceBtns.forEach(b => b.classList.remove('selected')); } });
+        salesProductGrid.addEventListener('input', e => { if (e.target.classList.contains('custom-price')) { const actionsDiv = e.target.closest('.product-actions'); actionsDiv.querySelectorAll('.price-btn').forEach(btn => btn.classList.remove('selected')); } });
+        purchaseProductGrid.addEventListener('click', e => { const tile = e.target.closest('.product-tile'); if (!tile) return; if(e.target.classList.contains('add-to-purchase-btn')) { const actionsDiv = tile.querySelector('.purchase-actions'); const cost = parseFloat(actionsDiv.querySelector('.purchase-cost').value); const quantity = parseInt(actionsDiv.querySelector('.purchase-quantity').value); if(isNaN(cost) || isNaN(quantity) || cost <= 0 || quantity <= 0) return alert('Valid cost and quantity required.'); const item = { inventoryId: parseInt(actionsDiv.dataset.id), name: actionsDiv.dataset.name, cost, quantity, totalCost: cost * quantity, createdAt: Date.now() }; const existing = purchaseCart.find(ci => ci.inventoryId === item.inventoryId && ci.cost === item.cost); if(existing) { existing.quantity += item.quantity; existing.totalCost = existing.quantity * existing.cost; } else { purchaseCart.push(item); } updatePurchaseCartUI(); actionsDiv.querySelector('.purchase-cost').value = ''; actionsDiv.querySelector('.purchase-quantity').value = '1'; } });
+        salesCartIcon.addEventListener('click', () => { if (salesCart.length > 0) openModal(salesCartModal); });
+        purchaseCartIcon.addEventListener('click', () => { if (purchaseCart.length > 0) openModal(purchaseCartModal); });
+        document.body.addEventListener('click', e => { if (e.target.classList.contains('delete-cart-item-btn')) { const type = e.target.dataset.type; const index = parseInt(e.target.dataset.index); if (type === 'sales') { salesCart.splice(index, 1); updateSalesCartUI(); if (salesCart.length === 0) closeModal(salesCartModal); } else if (type === 'purchase') { purchaseCart.splice(index, 1); updatePurchaseCartUI(); if (purchaseCart.length === 0) closeModal(purchaseCartModal); } } });
+        confirmOrderBtn.addEventListener('click', () => { if (salesCart.length === 0) return; let orders = getData('pvr_orders'); const newOrder = { id: String(Date.now()).slice(-7), customerId: currentOrderCustomer.id, items: salesCart, total: parseFloat(salesCartTotalAmountSpan.innerText), createdAt: Date.now(), status: 'unpaid' }; orders.push(newOrder); saveData('pvr_orders', orders); closeModal(salesCartModal); showSuccessAnimation(); renderOrders(); setTimeout(() => navigateToPage('orders-page'), 1800); });
+        confirmPurchaseBtn.addEventListener('click', () => { if (purchaseCart.length === 0) return; const purchases = getData('pvr_purchases'); const newPurchase = { id: Date.now(), vendorId: currentPurchaseVendor.id, items: purchaseCart, total: parseFloat(purchaseCartTotalAmountSpan.innerText), createdAt: Date.now(), status: 'unpaid' }; purchases.push(newPurchase); saveData('pvr_purchases', purchases); closeModal(purchaseCartModal); showSuccessAnimation(); setTimeout(() => navigateToPage('purchase-page'), 1800); });
+        orderList.addEventListener('click', async e => { if (e.target.classList.contains('view-bill-btn')) { const order = getData('pvr_orders').find(o => o.id == e.target.dataset.id); if (order) { const customer = getData('pvr_customers').find(c => c.id === order.customerId); generateAndShowBill(order, customer); } } });
+        accountsSubNav.addEventListener('click', e => { if(e.target.classList.contains('sub-nav-item')) { const subpage = e.target.dataset.subpage; document.querySelectorAll('.sub-nav-item').forEach(i => i.classList.remove('active')); e.target.classList.add('active'); document.querySelectorAll('.sub-page').forEach(p => p.classList.remove('active')); document.getElementById(`${subpage}-content`).classList.add('active'); } });
+        document.body.addEventListener('click', e => { if(e.target.classList.contains('mark-paid-btn')) { const type = e.target.dataset.type; const id = parseInt(e.target.dataset.id); if(type === 'receivable') { let orders = getData('pvr_orders'); orders.forEach(o => { if(o.customerId === id) o.status = 'paid'; }); saveData('pvr_orders', orders); renderReceivables(); } else if (type === 'payable') { let purchases = getData('pvr_purchases'); purchases.forEach(p => { if(p.vendorId === id) p.status = 'paid'; }); saveData('pvr_purchases', purchases); renderPayables(); } } });
+        document.getElementById('download-bill-btn').addEventListener('click', () => window.print());
+    });
     </script>
 </body>
 </html>
